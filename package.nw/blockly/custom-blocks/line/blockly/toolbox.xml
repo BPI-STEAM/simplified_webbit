@@ -1,0 +1,41 @@
+<category id="catLine"  COLOUR="30" index="4">
+  <block type="line_notify">
+    <value name="line_notify_token">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="line_notify_msg">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="line_chat">
+    <value name="channel">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="line_chat_reply">
+    <value name="msg">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="line_chat_msg"></block>
+  <block type="line_sticker">
+    <value name="package">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="sticker">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+</category>

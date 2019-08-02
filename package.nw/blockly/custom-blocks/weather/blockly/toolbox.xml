@@ -1,0 +1,9 @@
+<category id="catWeather" COLOUR="220" index="2">
+  <block type="get_weather"></block>
+  <block type="get_weather_aqi"></block>
+  <block type="get_weather_observe"></block>
+  <block type="get_weather_forecast"></block>
+  <block type="get_weather_reservoir"></block>
+  <block type="get_weather_quake"></block>
+  <block type="get_weather_radar"></block>
+</category>

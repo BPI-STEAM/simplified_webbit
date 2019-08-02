@@ -1,0 +1,18 @@
+{
+  "types": [
+    "radio_channel_set",
+    "radio_channel_get",
+    "radio_channel_value"
+  ],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "mqttClient.min.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

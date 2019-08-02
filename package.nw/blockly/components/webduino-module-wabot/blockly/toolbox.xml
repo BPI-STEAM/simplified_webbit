@@ -1,0 +1,26 @@
+<category id="catwabot" tags="fly,mark1,smart">
+  <block type="variables_set">
+    <field name="VAR">wabot</field>
+    <value name="VALUE">
+      <block type="wabot_new">
+      </block>
+    </value>
+  </block>
+  <block type="wabot_basic_action">
+  </block>
+  <block type="wabot_tempo">
+  </block>
+  <block type="wabot_status">
+  </block>
+  <block type="wabot_angle">
+    <value name="angle">
+      <block type="math_number">
+        <field name="NUM">90</field>
+      </block>
+    </value>
+  </block>
+  <block type="wabot_angle_tool">
+  </block>
+  <block type="wabot_stop">
+  </block>
+</category>

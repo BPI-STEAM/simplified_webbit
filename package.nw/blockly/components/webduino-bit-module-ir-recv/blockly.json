@@ -1,0 +1,20 @@
+{
+  "types": [
+    "irrecv_new",
+    "irrecv_on",
+    "irrecv_val",
+    "irrecv_off"
+  ],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "IR-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}
+

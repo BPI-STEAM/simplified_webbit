@@ -1,0 +1,19 @@
+<category id="catGPS" tags="fly,mark1" index="2">
+  <block type="variables_set">
+    <field name="VAR">gps</field>
+    <value name="VALUE">
+      <block type="gps_new">
+        <field name="rx_">10</field>
+        <field name="tx_">11</field>
+      </block>
+    </value>
+  </block>
+  <block type="gps_read">
+    <value name="qryTime">
+      <block type="math_number">
+        <field name="NUM">1000</field>
+      </block>
+    </value>
+  </block>
+  <block type="gps_get_data"></block>
+</category>

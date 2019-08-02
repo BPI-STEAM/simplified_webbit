@@ -1,0 +1,33 @@
+<category id="catDFPlayer" tags="fly,mark1,smart" index="11">
+  <block type="variables_set">
+    <field name="VAR">dfplayer</field>
+    <value name="VALUE">
+      <block type="DFPlayer_new">
+        <field name="Rx_">10</field>
+        <field name="Tx_">11</field>
+      </block>
+    </value>
+  </block>
+  <block type="DFPlayer_play">
+    <value name="value_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="DFPlayer_loop">
+    <value name="value_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="DFPlayer_volume">
+    <value name="value_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="DFPlayer_action"></block>
+</category>

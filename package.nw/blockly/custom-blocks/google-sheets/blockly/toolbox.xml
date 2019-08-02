@@ -1,0 +1,80 @@
+<category id="catGoogleSheetsPlus" COLOUR="90" index="1">
+  <block type="sheet_init">
+    <value name="sheetUrl">
+      <block type="text">
+        <field name="TEXT">https://</field>
+      </block>
+    </value>
+    <value name="sheetName">
+      <block type="text">
+        <field name="TEXT">工作表1</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_write_easy"></block>
+  <block type="sheet_write_normal">
+    <value name="range">
+      <block type="text">
+        <field name="TEXT">a1</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_read"></block>
+  <block type="sheet_read_data">
+    <value name="range">
+      <block type="text">
+        <field name="TEXT">a1</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_read_data_all"></block>
+  <block type="sheet_read_data_last"></block>
+  <block type="sheet_delete_row">
+    <value name="num">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="delete_num">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_delete_column">
+    <value name="num">
+      <block type="text">
+        <field name="TEXT">a</field>
+      </block>
+    </value>
+    <value name="delete_num">
+      <block type="text">
+        <field name="TEXT">a</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_add_row">
+    <value name="num">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="add_num">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="sheet_add_column">
+    <value name="num">
+      <block type="text">
+        <field name="TEXT">a</field>
+      </block>
+    </value>
+    <value name="add_num">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+</category>

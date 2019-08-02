@@ -1,0 +1,23 @@
+<category id="catPhotocell" index="8">
+  <block type="variables_set">
+    <field name="VAR">photocell</field>
+    <value name="VALUE">
+      <block type="photocell_new"></block>
+    </value>
+  </block>
+  <block type="variables_set">
+    <field name="VAR">photocell</field>
+    <value name="VALUE">
+      <block type="photocell_pin_get">
+        <value name="pin">
+          <block type="pin_num">
+            <field name="pin_">0</field>
+          </block>                                                                                                                                                            
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="photocell_detected"></block>
+  <block type="photocell_val"></block>
+  <block type="photocell_stop"></block>
+</category>

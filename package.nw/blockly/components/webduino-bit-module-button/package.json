@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-button",
+  "version": "1.0.0",
+  "description": "Button Module for Webduino:bit",
+  "main": "BitButton.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "button",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

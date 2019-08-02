@@ -1,0 +1,31 @@
+<category id="catLORA" tags="fly,smart" index="3">
+  <block type="variables_set">
+    <field name="VAR">lora</field>
+    <value name="VALUE">
+      <block type="lora_new">
+        <field name="resetPin">9</field>
+        <field name="address">9</field>
+      </block>
+    </value>
+  </block>
+  <block type="lora_send">
+    <value name="data">
+      <block type="text">
+        <field name="TEXT">test</field>
+      </block>
+    </value>
+  </block>  
+
+  <block type="lora_send_ack">
+    <value name="data">
+      <block type="text">
+        <field name="TEXT">test</field>
+      </block>
+    </value>
+  </block>  
+
+  <block type="lora_recv_ack"></block>
+  <block type="lora_recv_data"></block>
+
+
+</category>

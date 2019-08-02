@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-dfplayer",
+  "description": "DFPlayer Module for Webduino",
+  "main": "DFPlayer.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "dfplayer"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

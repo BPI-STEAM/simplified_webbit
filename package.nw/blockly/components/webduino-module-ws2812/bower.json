@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-ws2812",
+  "description": "WS2812 Module for Webduino",
+  "main": "ws2812.js",
+  "authors": "",
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "ws2812"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

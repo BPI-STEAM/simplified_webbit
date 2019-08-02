@@ -1,0 +1,27 @@
+<category id="catIrRaw" tags="fly,mark1" index="10">
+  <block type="variables_set">
+    <field name="VAR">irrawrecv</field>
+    <value name="VALUE">
+      <block type="irraw_new_recv">
+        <field name="pin_">10</field>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set">
+    <field name="VAR">irraw</field>
+    <value name="VALUE">
+      <block type="irraw_new_send">
+        <field name="pin_">9</field>
+      </block>
+    </value>
+  </block>
+  <block type="irraw_launch">
+    <value name="code_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="irraw_on"></block>
+  <block type="irraw_val"></block>
+</category>

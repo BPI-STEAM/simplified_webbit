@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-gps",
+  "description": "GPS Module for Webduino",
+  "main": "GPS.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "tinygps"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

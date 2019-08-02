@@ -1,0 +1,15 @@
+Blockly.Msg.WEBDUINO_LED_MATRIX = "LED Matrix";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_SET = "Set";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_SELECT_COLOR = "Select color";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_BRIGHTNESS = "Brightness (0~20)";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_NUMBER = "color of #";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_COLOR_TO = "LED to";
+Blockly.Msg.WEBDUINO_LED_MATRIX_CLOSE = "Turn off";
+Blockly.Msg.WEBDUINO_LED_MATRIX_CHARACTER_SHOW = "Show single character";
+Blockly.Msg.WEBDUINO_LED_MATRIX_CHARACTER_COLOR_TO = "color of #";
+Blockly.Msg.WEBDUINO_LED_MATRIX_CHARACTER_COLOR_XY = "color of #";
+Blockly.Msg.WEBDUINO_LED_MATRIX_STRING_SHOW = "Marquee";
+Blockly.Msg.WEBDUINO_LED_MATRIX_STRING_SPEED = "speed of";
+Blockly.Msg.WEBDUINO_LED_MATRIX_STRING_COLOR_TO = "(Max char : 54)color of #";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_EMOJI = "Emoji";
+Blockly.Msg.WEBDUINO_LED_MATRIX_LED_EMOJICOLOR = " color";

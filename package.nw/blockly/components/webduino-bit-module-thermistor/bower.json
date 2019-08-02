@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-thermistor",
+  "description": "Thermistor Module for Webduino:bit",
+  "main": "BitThermistor-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "thermistor",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@webduinoio/bit-mpu9250",
+  "version": "0.1.3",
+  "description": "MPU9250 Module for Webduino:bit",
+  "repository": "https://github.com/webduinoio/webduino-bit-module-mpu9250.git",
+  "homepage": "https://webduino.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "mpu9250",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

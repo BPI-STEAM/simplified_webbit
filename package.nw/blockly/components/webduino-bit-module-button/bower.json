@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-button",
+  "description": "Button Module for Webduino:bit",
+  "main": "BitButton-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "button",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

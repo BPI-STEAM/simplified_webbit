@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-led-matrix",
+  "description": "LED Matrix Module for Webduino:bit",
+  "main": "BitLedMatrix-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "led",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

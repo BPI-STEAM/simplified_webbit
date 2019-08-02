@@ -1,0 +1,22 @@
+{
+  "name": "webduino-bit-module-thermistor",
+  "version": "0.1.2",
+  "description": "Thermistor Module for Webduino Bit",
+  "repository": "https://github.com/webduinoio/webduino-bit-module-thermistor.git",
+  "homepage": "https://webduino.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "thermistor",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

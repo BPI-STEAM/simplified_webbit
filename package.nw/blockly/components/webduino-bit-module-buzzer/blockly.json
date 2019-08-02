@@ -1,0 +1,23 @@
+{
+  "types": [
+    "buzzer_new",
+    "buzzer_notes_tempos",
+    "buzzer_music_play",
+    "buzzer_var_notes_var_tempos",
+    "buzzer_event",
+    "buzzer_state",
+    "buzzer_music_array",
+    "buzzer_load_music"
+  ],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "BitBuzzer-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

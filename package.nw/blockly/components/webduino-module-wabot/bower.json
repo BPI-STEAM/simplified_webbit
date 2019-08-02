@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-wabot",
+  "description": "WABot Module for Webduino",
+  "main": "wabot.js",
+  "authors": "",
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "wabot"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

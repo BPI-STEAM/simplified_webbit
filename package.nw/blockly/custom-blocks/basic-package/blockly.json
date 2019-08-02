@@ -1,0 +1,24 @@
+{
+  "types": [
+    "basic_irrecv_on",
+    "basic_irrecv_value",
+    "basic_irled_launch",
+    "basic_ultrasonic_distance",
+    "basic_servo_angle"
+  ],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "BitIR-blockly.js",
+    "BitUltrasonic-blockly.js",
+    "BitServo-blockly.js",
+    "BitSound-blockly.js",
+    "BitPhotocell-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

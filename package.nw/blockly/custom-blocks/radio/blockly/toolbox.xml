@@ -1,0 +1,22 @@
+<category id="catBroadcast"  COLOUR="20" index="3">
+  <block type="radio_channel_set">
+    <value name="msg_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="name_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="radio_channel_get">
+    <value name="name_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="radio_channel_value"></block>
+</category>

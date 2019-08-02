@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-irraw",
+  "description": "Infrared Transmitting and Receiving Module for Webduino",
+  "main": "IrRaw.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "infrared"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

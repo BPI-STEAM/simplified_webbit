@@ -1,0 +1,35 @@
+{
+  "types": [
+    "car_tracker_move",
+    "car_tracker_speed",
+    "car_tracker_track",
+    "car_tracker_do",
+    "car_tracker_on",
+    "car_tracker_off",
+    "car_button_event",
+    "car_ultrasonic_distance",
+    "car_irrecv_on",
+    "car_irrecv_value",
+    "car_irled_launch",
+    "car_ws2812_print",
+    "car_ws2812_brightness",
+    "car_ws2812_off"
+  ],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "WS2812.js",
+    "CarTracker.js",
+    "BitIR-blockly.js",
+    "BitWS2812-blockly.js",
+    "BitCarButton-blockly.js",
+    "BitCarTracker-blockly.js",
+    "BitUltrasonic-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

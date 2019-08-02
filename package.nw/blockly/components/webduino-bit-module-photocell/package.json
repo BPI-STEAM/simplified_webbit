@@ -1,0 +1,20 @@
+{
+  "name": "webduino-module-bit-photocell",
+  "version": "1.0.0",
+  "description": "Photocell Module for Webduino Bit",
+  "main": "BitPhotocell-blockly.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "photocell",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

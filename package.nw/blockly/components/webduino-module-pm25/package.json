@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-pm25",
+  "version": "1.0.0",
+  "description": "PM25 Module for Webduino",
+  "main": "G3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "g3"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

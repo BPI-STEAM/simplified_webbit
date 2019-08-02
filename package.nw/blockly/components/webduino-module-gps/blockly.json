@@ -1,0 +1,15 @@
+{
+  "types": ["gps_new","gps_read","gps_get_number"],
+  "category": "catMenu4",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "GPS.js",
+    "GPS-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

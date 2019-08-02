@@ -1,0 +1,13 @@
+  <category id="catSoil" index="7">
+    <block type="variables_set">
+      <field name="VAR">soil</field>
+      <value name="VALUE">
+        <block type="soil_new">
+          <field name="pin_">4</field>
+        </block>
+      </value>
+    </block>
+    <block type="soil_detected"></block>
+    <block type="soil_val"></block>
+    <block type="soil_stop"></block>
+  </category>

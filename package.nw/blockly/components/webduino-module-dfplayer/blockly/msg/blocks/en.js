@@ -1,0 +1,12 @@
+Blockly.Msg.WEBDUINO_DFPLAYER = 'MP3 (DFPlayer), Tx ';
+Blockly.Msg.WEBDUINO_DFPLAYER_RX = '  Rx';
+Blockly.Msg.WEBDUINO_DFPLAYER_PLAY = 'Play #';
+Blockly.Msg.WEBDUINO_DFPLAYER_START = 'Start';
+Blockly.Msg.WEBDUINO_DFPLAYER_STOP = 'Stop';
+Blockly.Msg.WEBDUINO_DFPLAYER_PAUSE = 'Pause';
+Blockly.Msg.WEBDUINO_DFPLAYER_LOOP = 'Repeat #';
+Blockly.Msg.WEBDUINO_DFPLAYER_PREVIOUS = 'Previous';
+Blockly.Msg.WEBDUINO_DFPLAYER_NEXT = 'Next';
+Blockly.Msg.WEBDUINO_DFPLAYER_VOLUME = 'Set Volume (0~30)';
+Blockly.Msg.WEBDUINO_DFPLAYER_SET = 'Action';
+Blockly.Msg.WEBDUINO_DFPLAYER_NUM = 'of Tracks';

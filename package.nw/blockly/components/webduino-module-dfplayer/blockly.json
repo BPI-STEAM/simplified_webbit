@@ -1,0 +1,15 @@
+{
+  "types": ["DFPlayer_new", "DFPlayer_play", "DFPlayer_loop", "DFPlayer_volume", "DFPlayer_previous", "DFPlayer_next", "DFPlayer_start", "DFPlayer_stop", "DFPlayer_pause"],
+  "category": "catMenu2",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "DFPlayer.js",
+    "DFPlayer-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

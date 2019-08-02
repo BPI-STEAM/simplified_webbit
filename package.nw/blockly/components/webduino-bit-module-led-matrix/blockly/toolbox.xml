@@ -1,0 +1,105 @@
+<category id="catLedMatrix" index="1">
+  <block type="variables_set">
+    <field name="VAR">matrix</field>
+    <value name="VALUE">
+      <block type="matrix_new"></block>
+    </value>
+  </block>
+  <block type="matrix_color_output">
+    <value name="color_input">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+  <block type="matrix_color_output">
+    <value name="color_input">
+      <block type="matrix_color_array"></block>
+    </value>
+  </block>
+  <block type="matrix_color_output">
+    <value name="color_input">
+      <block type="matrix_emoji"></block>
+    </value>
+  </block>
+  <block type="matrix_color_output">
+    <value name="color_input">
+      <block type="lists_create_with">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_xy">
+    <value name="x">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="y">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="color_input">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+  <block type="matrix_color_single">
+    <value name="led_">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <value name="color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_off"></block>
+  <block type="matrix_brightness">
+    <value name="brightness_">
+      <block type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_character">
+    <value name="char_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>
+  <block type="matrix_string">
+    <value name="str_">
+      <block type="text">
+        <field name="TEXT">Hello the world.</field>
+      </block>
+    </value>
+    <value name="color_">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+    <field name="speed_">1</field>
+  </block>  
+</category>

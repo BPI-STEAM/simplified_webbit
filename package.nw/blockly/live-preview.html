@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-hant-TW">
+
+<head>
+  <title>HyProto Live-Preview</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="dist/storage-preview.min.js"></script>
+</head>
+
+<body>
+  <script>
+  window.addEventListener('load', function(e) {
+    var storage = new PreviewStorage(location.origin);
+    var frame = document.querySelector('#frame');
+
+    if (window.location.hash.length > 1) {
+      storage.retrieve(window.location.hash.substring(1), function onload(err, data) {
+        if (!err && data) {
+          var doc = document;
+          doc.open('text/html', '');
+          doc.write(data);
+          doc.close();
+        }
+      });
+    }
+  });
+  </script>
+</body>
+
+</html>

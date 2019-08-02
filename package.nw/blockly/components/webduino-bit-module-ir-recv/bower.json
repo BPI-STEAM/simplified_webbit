@@ -1,0 +1,21 @@
+{
+  "name": "webduino-bit-module-ir-recv",
+  "description": "IR Recv Module for Webduino:bit",
+  "main": "IRrecv-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "IR",
+    "recv",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

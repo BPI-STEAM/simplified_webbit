@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-lora",
+  "description": "Lora Module for Webduino",
+  "main": "LORA.js",
+  "authors": "",
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "lora"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

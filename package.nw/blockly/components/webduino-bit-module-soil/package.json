@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-soil",
+  "version": "1.0.0",
+  "description": "Block Module for Soil Moisture of Webduino:bit.",
+  "main": "BitSoil.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "soil",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "types": [
+    "sheet_init",
+    "sheet_write_normal",
+    "sheet_write_easy",
+    "sheet_read",
+    "sheet_read_data",
+    "sheet_read_data_all",
+    "sheet_read_data_last",
+    "sheet_delete_row",
+    "sheet_delete_column",
+    "sheet_add_row",
+    "sheet_add_column"
+  ],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "spreadsheets.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

@@ -1,0 +1,14 @@
+<category id="catMPU9250" index="10">
+  <block type="variables_set">
+    <field name="VAR">mpu9250</field>
+    <value name="VALUE">
+      <block type="mpu9250_new"></block>
+    </value>
+  </block>
+  <block type="mpu9250_detected"></block>
+  <block type="mpu9250_val"></block>
+  <block type="mpu9250_stop"></block>
+  <block type="mpu9250_detectTime">
+    <field name="detectTimeType_">2</field>
+  </block>
+</category>

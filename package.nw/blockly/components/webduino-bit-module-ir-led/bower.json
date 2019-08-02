@@ -1,0 +1,21 @@
+{
+  "name": "webduino-bit-module-ir-led",
+  "description": "IR Led Module for Webduino:bit",
+  "main": "IRLed-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "IR",
+    "Led",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

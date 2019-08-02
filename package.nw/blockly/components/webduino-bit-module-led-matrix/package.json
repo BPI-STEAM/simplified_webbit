@@ -1,0 +1,22 @@
+{
+  "name": "webduino-bit-module-led-matrix",
+  "version": "0.1.4",
+  "description": "LED Matrix Module for Webduino:bit",
+  "repository": "https://github.com/webduinoio/webduino-bit-module-led-matrix.git",
+  "homepage": "https://webduino.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "led",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

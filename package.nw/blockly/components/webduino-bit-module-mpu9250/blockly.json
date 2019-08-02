@@ -1,0 +1,20 @@
+{
+  "types": [
+    "mpu9250_new",
+    "mpu9250_detected",
+    "mpu9250_val",
+    "mpu9250_stop"
+  ],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "BitMPU9250-blockly.js",
+    "BitMPU9250.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

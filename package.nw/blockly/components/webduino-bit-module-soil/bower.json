@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-soil",
+  "description": "Block Module for Soil Moisture of Webduino:bit.",
+  "main": "BitSoil-blockly.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "soil",
+    "webduino:bit"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

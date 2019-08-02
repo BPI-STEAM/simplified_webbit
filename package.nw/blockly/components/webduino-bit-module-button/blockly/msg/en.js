@@ -1,0 +1,1 @@
+MSG.catButton = "Button Switch";

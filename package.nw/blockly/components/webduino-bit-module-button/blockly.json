@@ -1,0 +1,15 @@
+{
+  "types": ["button_new", "button_event"],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "BitButton.js",
+    "BitButton-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

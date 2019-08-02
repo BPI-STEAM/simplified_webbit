@@ -1,0 +1,1 @@
+MSG.catWS2812 = "WS2812 Matrix";

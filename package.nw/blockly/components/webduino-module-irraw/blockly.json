@@ -1,0 +1,15 @@
+{
+  "types": ["irraw_new_send", "irraw_new_recv", "irraw_on", "irraw_launch", "irraw_val"],
+  "category": "catMenu2",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "IrRaw.js",
+    "IrRaw-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

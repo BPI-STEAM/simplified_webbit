@@ -1,0 +1,26 @@
+<category id="catBuzzer" index="7">
+  <block type="variables_set">
+    <field name="VAR">buzzer</field>
+    <value name="VALUE">
+      <block type="buzzer_new"></block>
+    </value>
+  </block>
+  <block type="buzzer_music_play"></block>
+  <block type="buzzer_var_notes_var_tempos"></block>
+  <block type="buzzer_notes_tempos"></block>
+  <block type="buzzer_music_array">
+    <value name="notes_">
+      <block type="text">
+        <field name="TEXT">C6,D6,E6,F6,G6,A6,B6</field>
+      </block>
+    </value>
+    <value name="tempos_">
+      <block type="text">
+        <field name="TEXT">8</field>
+      </block>
+    </value>
+  </block>
+  <block type="buzzer_load_music"></block>
+  <block type="buzzer_event"></block>
+  <block type="buzzer_state"></block>
+</category>

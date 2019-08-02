@@ -1,0 +1,1 @@
+MSG.catSound = "Sound Sensor";

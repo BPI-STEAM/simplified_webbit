@@ -1,0 +1,18 @@
+<category id="catBasicPackage" COLOUR="60" index="100">
+  <block type="basic_irrecv_on"></block>
+  <block type="basic_irrecv_value"></block>
+  <block type="basic_irled_launch">
+    <value name="code_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+
+  <block type="basic_ultrasonic_distance">
+    <field name="trig_">3</field>
+    <field name="echo_">9</field>
+  </block>
+
+  <block type="basic_servo_angle"></block>
+</category>

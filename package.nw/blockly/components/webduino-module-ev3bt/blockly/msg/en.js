@@ -1,0 +1,1 @@
+MSG.catEV3BT = "Lego EV3";

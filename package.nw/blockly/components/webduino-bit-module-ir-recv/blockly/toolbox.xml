@@ -1,0 +1,13 @@
+    <category id="catIRRecv"  index="8">
+      <block type="variables_set">
+        <field name="VAR">irrecv</field>
+        <value name="VALUE">
+          <block type="irrecv_new">
+            <field name="pin_">1</field>
+          </block>
+        </value>
+      </block>
+      <block type="irrecv_on"></block>
+      <block type="irrecv_val"></block>
+      <block type="irrecv_off"></block>
+    </category>

@@ -1,0 +1,21 @@
+<category id="catLCD1602" tags="fly,smart" index="5">
+  <block type="variables_set">
+    <field name="VAR">lcd1602</field>
+    <value name="VALUE">
+      <block type="lcd1602_new">
+        <field name="sda_">10</field>
+        <field name="scl_">11</field>
+        <field name="addr_">0x27</field>
+      </block>
+    </value>
+  </block>
+  <block type="lcd1602_print">
+    <value name="value_">
+      <block type="text">
+        <field name="TEXT">Hello</field>
+      </block>
+    </value>
+  </block>
+  <block type="lcd1602_row_column"></block>
+  <block type="lcd1602_clear"></block>
+</category>

@@ -1,0 +1,53 @@
+<category id="catFullPackage" index="101" COLOUR="70">
+  <block type="full_irrecv_on"></block>
+  <block type="full_irrecv_value"></block>
+  <block type="full_irled_launch">
+    <value name="code_">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+
+  <block type="full_ultrasonic_distance">
+    <field name="trig_">3</field>
+    <field name="echo_">9</field>
+  </block>
+
+  <block type="full_servo_angle"></block>
+
+  <block type="full_sound_status"></block>
+
+  <block type="full_photocell_value">
+    <field name="pin_">4</field>
+  </block>
+
+  <block type="full_dht_get_number">
+    <field name="pin_">1</field>
+  </block>
+
+  <block type="full_shock_event">
+    <field name="pin_">1</field>
+  </block>
+
+  <block type="full_relay_state">
+    <field name="pin_">1</field>
+  </block>
+
+  <block type="full_soil_value">
+    <field name="pin_">4</field>
+  </block>
+
+  <block type="full_led_state">
+    <field name="pin_">1</field>
+  </block>
+
+  <block type="full_rgbled_setcolor">
+    <field name="red_">3</field>
+    <field name="green_">1</field>
+    <field name="blue_">2</field>
+    <value name="color_">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
+</category>

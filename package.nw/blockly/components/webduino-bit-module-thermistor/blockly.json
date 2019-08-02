@@ -1,0 +1,20 @@
+{
+  "types": [
+    "thermistor_new",
+    "thermistor_detected",
+    "thermistor_val",
+    "thermistor_stop"
+  ],
+  "category": "toolbox",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "BitThermistor-blockly.js",
+    "BitThermistor.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

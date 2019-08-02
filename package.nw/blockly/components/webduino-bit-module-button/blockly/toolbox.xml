@@ -1,0 +1,16 @@
+<category id="catButton" index="6">
+  <block type="variables_set" tags="fly,mark1">
+    <field name="VAR">button</field>
+    <value name="VALUE">
+      <block type="button_new"></block>
+    </value>
+  </block>
+  <block type="variables_set" tags="fly,mark1">
+    <field name="VAR">button</field>
+    <value name="VALUE">
+      <block type="button_pin_get"></block>
+    </value>
+  </block>
+  <block type="button_event"></block>
+  <block type="button_event_2"></block>
+</category>

@@ -1,0 +1,6 @@
+// LoRa
+Blockly.Msg.WEBDUINO_LORA_SEND_STRING = "传送字串";
+Blockly.Msg.WEBDUINO_LORA_SUCCESS_CALLBACK = "成功后执行";
+Blockly.Msg.WEBDUINO_LORA_FAIL_CALLBACK = "失败后执行";
+Blockly.Msg.WEBDUINO_LORA_RECEIVE_CALLBACK = "接收字串后执行";
+Blockly.Msg.WEBDUINO_LORA_RECEIVED_STRING = "接收的字串";

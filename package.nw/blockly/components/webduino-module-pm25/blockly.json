@@ -1,0 +1,15 @@
+{
+  "types": ["g3_new","g3_get","g3_get_number","g3_read","g3_trigger"],
+  "category": "catMenu3",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "G3.js",
+    "G3-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

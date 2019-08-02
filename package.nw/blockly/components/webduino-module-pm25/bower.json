@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-pm25",
+  "description": "PM25 Module for Webduino",
+  "main": "G3.js",
+  "authors": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "waG3"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

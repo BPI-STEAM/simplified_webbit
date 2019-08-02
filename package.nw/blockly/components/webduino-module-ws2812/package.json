@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-ws2812",
+  "version": "1.0.0",
+  "description": "WS2812 Module for Webduino",
+  "main": "WS2812.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "ws2812"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

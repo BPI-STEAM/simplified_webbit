@@ -1,0 +1,19 @@
+{
+  "name": "webduino-module-lora",
+  "version": "1.0.0",
+  "description": "Lora Module for Webduino",
+  "main": "LORA.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "lora"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

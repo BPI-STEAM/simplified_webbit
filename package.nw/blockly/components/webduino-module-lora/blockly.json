@@ -1,0 +1,15 @@
+{
+  "types": ["lora_new","lora_send","lora_send_ack","lora_recv_ack","lora_recv_data"],
+  "category": "catMenu4",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "LORA.js",
+    "LORA-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

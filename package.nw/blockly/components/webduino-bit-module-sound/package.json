@@ -1,0 +1,20 @@
+{
+  "name": "webduino-bit-module-sound",
+  "version": "1.0.0",
+  "description": "Sound Module for Webduino:bit",
+  "main": "BitSound.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "arduino",
+    "webduino",
+    "sound",
+    "webduino:bit"
+  ],
+  "dependencies": {
+    "webduino-js": "0.x"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "types": [
+    "full_irrecv_on",
+    "full_irrecv_value",
+    "full_irled_launch",
+    "full_ultrasonic_distance",
+    "full_servo_angle",
+    "full_sound_status",
+    "full_dht_get_number",
+    "full_shock_new",
+    "full_shock_event",
+    "full_relay_state",
+    "full_soil_value",
+    "full_led_state",
+    "full_rgbled_setcolor",
+    "full_photocell_value"
+  ],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "Dht.js",
+    "BitDht-blockly.js",
+    "BitShock-blockly.js",
+    "BitRelay-blockly.js",
+    "BitSoil-blockly.js",
+    "BitLed-blockly.js",
+    "BitRGBLed-blockly.js",
+    "BitPhotocell-blockly.js",
+    "BitIR-blockly.js",
+    "BitUltrasonic-blockly.js",
+    "BitServo-blockly.js",
+    "BitSound-blockly.js"
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}

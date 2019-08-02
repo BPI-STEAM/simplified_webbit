@@ -1,0 +1,382 @@
+<header>
+  <a href="https://webduino.io" target="_blank" id="logo">
+    <img class="logo" src="media/logo3.png" alt="Web:Bit">
+    <h1 id="blocklyHeader">
+      {{webbitTitle}}<span id="saveStatus">{{changesSaved}}</span>
+    </h1>
+  </a>
+  <div id="tab_toggle">
+    <div id="tab_blocks" class="tabon"><i class="icon-puzzle-outline"></i><span>{{webbitMenuBlock}}</span></div>
+    <div id="tab_javascript" class="taboff"><i class="icon-code-outline"></i><span>{{webbitMenuJS}}</span></div>
+  </div>
+  <div id="tab_control">
+    <div id="fileButton" class="notext toolMenu">
+      <i class="icon-folder2 small"></i><span>{{webbitMenuFile}}</span>
+      <div class="subMenu">
+        <div attr-type="web, exe" attr-local="global, china">
+          <a id="eduImportButton">
+            <i class="icon-upload-outline small"></i><span>{{webbitMenuFileLoad}}</span>
+          </a>
+        </div>
+        <div attr-type="web, exe" attr-local="global, china">
+          <a id="eduExportButton">
+            <i class="icon-download-outline small"></i><span>{{webbitMenuFileSave}}</span>
+          </a>
+          <input type="file" style="display:none;" id="eduImportInput">
+        </div>
+        <div id="linkButtonDiv" attr-type="web" attr-local="global, china">
+          <a id="linkButton">
+            <i class="icon-attachment-outline small"></i><span>{{webbitMenuFileShare}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="sampleButton" class="notext toolMenu">
+      <i class="icon-document-text small"></i><span>{{webbitMenuSample}}</span>
+    </div>
+    <div id="tutorialsButton" class="notext toolMenu">
+      <a href="{{webbitMenuTutorialsURL}}" target="_blank"><i
+          class="icon-book2 small"></i><span>{{webbitMenuTutor}}</span></a>
+    </div>
+    <div id="trashButton" class="notext toolMenu">
+      <i class="icon-trash1 small"></i><span>{{webbitMenuClean}}</span>
+    </div>
+    <div id="moreButton" class="notext toolMenu">
+      <i class="icon-shopping-bag1 small"></i><span>{{webbitMenuMore}}</span>
+      <div class="subMenu">
+        <div id="eduCloudHostDiv" class="disable" attr-type="web, exe"  attr-local="global">
+          <a id="eduCloudHost" class="stop">
+            <i class="icon-cross2 small"></i><span>{{webbitMenuMoreCloud}}</span>
+          </a>
+          <b>{{webbitMenuMoreWifiOnly}}</b>
+        </div>
+        <div attr-type="web, exe"  attr-local="global, china">
+          <a id="eduExtension">
+            <i class="icon-puzzle-outline small"></i><span>{{webbitMenuMoreExtension}}</span>
+          </a>
+          <b>{{webbitMenuMoreCommingSoon}}</b>
+        </div>
+        <div attr-type="web, exe"  attr-local="global">
+          <a id="eduStore" href="https://store.webduino.io/categories/webbit?utm_source=webbit&utm_medium=menu" target="_blank">
+            <i class="icon-shopping-cart1 small"></i><span>{{webbitMenuStore}}</span>
+          </a>
+          <b>{{webbitMenuMoreCommingSoon}}</b>
+        </div>
+        <div id="eduDownloadDiv" attr-type="web"  attr-local="global, china">
+          <a id="eduDownload" href="{{webbitMenuDownloadURL}}" target="_blank">
+            <i class="icon-briefcase2 small"></i><span>{{webbitMenuMoreDownload}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="runButton" class="notext primary toolMenu">
+      <i class="icon-media-play-outline"></i><span class="menu-run">{{webbitMenuRun}}</span><span class="menu-stop"
+        style="display:none;">{{webbitMenuStop}}</span>
+    </div>
+  </div>
+  <div id="userMenu" style="display:none;">
+    <a href="https://webduino.io/" target="_blank">
+      <i class="icon-home" style="font-size:16px; bottom: -1px;"></i> <b>{{userMenuWebSite}}</b>
+    </a>
+    <a href="https://tutorials.webduino.io/zh-tw/docs/basic/index.html?utm_source=cloud-blockly&utm_medium=userMenu&utm_campaign=tutorials"
+      target="_blank">
+      <i class="icon-book"></i> <b>{{userMenuTutorials}}</b>
+    </a>
+    <span><i class="icon-earth"></i> <select id="languageMenu"></select></span>
+  </div>
+  <div id="confirmWindow">
+    <span></span>
+  </div>
+</header>
+<div id="openModal" class="modalDialog">
+  <div>
+    <a href="#" title="Close" class="close">X</a>
+    <div id="qrImg" class="qrcode"></div>
+    <div class="linkContainer">
+      <a href="" id="qrLink" target="_blank">{{linkQrcode}}</a>
+    </div>
+  </div>
+</div>
+<div id="blockFilter">
+  <a class="filterBtn selected">All</a>
+</div>
+<div id="functionSelector">
+  <a id="tab_custom" data-active="false"><i class="icon-cog"></i></a>
+</div>
+<table class="nav" id="mainTable">
+  <tr style="display:none;">
+    <td>
+      <table width="100%">
+        <tr id="tabRow">
+          <td id="copyCode" style="display:none;" data-clipboard-target="#content_javascript"
+            data-tooltip="{{copyToClipboard}}" class="toolMenu">
+            <i class="icon-copy"></i>
+          </td>
+          <td class="tabmax" style="display:none;">
+            <a href="#" id="qrButton" class="linkButton toolMenu">
+              <i class="icon-qrcode"></i>
+              <div>{{qrcodeTooltip}}</div>
+            </a>
+            <a href="launcher.html" target="_blank" id="linkToBin" class="linkButton toolMenu">
+              <i class="icon-embed2"></i>
+              <div>{{openJsbin}}</div>
+            </a>
+            <div id="check-device-online" class="toolMenu">
+              <input id="input-device" class="">
+              <span id="check-btn" class="check-btn">
+                <i class="icon-power" id="check-icon"></i>
+              </span>
+              <div>{{checkDeviceOnline}}</div>
+            </div>
+            <button id="demoButton" class="notext toolMenu">
+              <i class="icon-lab"></i>
+              <div>{{demoTooltip}}</div>
+            </button>
+            <button id="simulatorButton" class="notext toolMenu">
+              <i class="icon-library"></i>
+              <div>{{simulatorTooltip}}</div>
+            </button>
+            {{!-- <button id="linkButton" class="notext toolMenu">
+              <i class="icon-link"></i>
+              <div>{{linkTooltip}}</div>
+            </button> --}}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="99%" id="content_area"></td>
+  </tr>
+</table>
+
+<div id="content_blocks" class="content"></div>
+<pre id="content_javascript" class="content"></pre>
+<div id="content_custom" class="content">
+  <ul class="custom-tab">
+    <li class="tab-trigger active" data-tab="export">{{tabExport}}</li>
+    <li class="tab-trigger" data-tab="custom">{{tabCustom}}</li>
+  </ul>
+  <div class="custom-content">
+    <div class="tab-content" data-tab="export">
+      <div class="form-import">
+        <h2>{{importTitle}}</h2>
+        <hr>
+        <p>{{importDescription}}</p>
+        <input id="chooseFile" type="file"
+          onchange="document.getElementById('chooseFileName').innerHTML = this.value.split('\\')[this.value.split('\\').length-1]; document.getElementById('importFileBtn').className='btn btn-import-blocks show-import-file-button';"
+          accept=".xml">
+        <button id="importFileBtn" class="btn-import">{{importButton}}</button>
+        <button id="chooseFileBtn" class="btn-import"
+          onclick="document.getElementById('chooseFile').click();">{{chooseFileButton}}</button>
+        <button id="importFromUrlBtn" class="btn-import" style="display:none">{{importFromUrlButton}}</button>
+        <span id="chooseFileName"></span>
+      </div>
+      <div class="form-export">
+        <h2>{{exportTitle}}</h2>
+        <hr>
+        <p>{{exportDescription}}</p>
+        <a id="btn-export-blocks" class="btn-import">{{exportButton}}</a>
+      </div>
+    </div>
+    <div class="tab-content" data-tab="custom">
+      <h2>{{customTitle}}</h2>
+      <span class="text-custom-description"></span>
+      <ul>
+        <li>{{customNotice1}}</li>
+        <li>{{customNotice3}}</li>
+      </ul>
+      <div class="block-def-wrapper"></div>
+      <form class="form-custom-blocks">
+        <input type="text" class="input-custom-blocks">
+        <button type="submit" class="btn btn-add-block" id="importBlocklyJSON">{{customButton}}</button>
+        <p class="info"></p>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="extension-menu" class="pop-window" tabindex="1">
+  <div class="pop-close"><i class="icon-times"></i></div>
+  <div class="pop-bg">
+    <h2>{{webbitExtensionTitleH2}}</h2>
+    <div class="pop-content">
+      <h3 attr-local="global">{{webbitExtensionTitleH3.internet.title}}</h3>
+      <div data-source="google-sheets" attr-local="global">
+        <div><img data-src="custom-blocks/google-sheets/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.googleSheet}}</span>
+        <i>( {{webbitExtensionTitleH3.add}} )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+      <div data-source="weather" attr-local="global">
+        <div><img data-src="custom-blocks/weather/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.weather}}</span>
+        <i>( {{webbitExtensionTitleH3.add}}  )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+      <div data-source="radio" attr-local="global">
+        <div><img data-src="custom-blocks/radio/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.radio}}</span>
+        <i>( {{webbitExtensionTitleH3.add}}  )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+      <div data-source="line" attr-local="global">
+        <div><img data-src="custom-blocks/line/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.line}}</span>
+        <i>( {{webbitExtensionTitleH3.add}}  )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+      <h3 attr-local="global, china">{{webbitExtensionTitleH3.package.title}}</h3>
+      <div data-source="basic-package" attr-local="global, china">
+        <div><img data-src="custom-blocks/basic-package/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.basicPackage}}</span>
+        <i>( {{webbitExtensionTitleH3.add}} )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+      {{!-- <div data-source="full-package" attr-local="global">
+        <div><img data-src="custom-blocks/full-package/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.fullPackage}}</span>
+        <i>( {{webbitExtensionTitleH3.add}} )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div> --}}
+      <div data-source="car-package" attr-local="global, china">
+        <div><img data-src="custom-blocks/car-package/snapshot.jpg"></div>
+        <span>{{webbitExtensionTitleH3.internet.carPackage}}</span>
+        <i>( {{webbitExtensionTitleH3.add}} )</i>
+        <i>( {{webbitExtensionTitleH3.fixed}} )</i>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="sample-menu" class="pop-window" tabindex="1">
+  <div class="pop-close"><i class="icon-times"></i></div>
+  <div class="pop-bg">
+    <h2>{{webbitSampleTitleH2}}</h2>
+    <div class="pop-content">
+      <h3>{{webbitSampleTitleH3.s0}}</h3>
+      <div data-source="{{webbitSample.s0.s01.json}}"><img
+          data-src="{{webbitSample.s0.s01.img}}"><span>{{webbitSample.s0.s01.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s02.json}}"><img
+          data-src="{{webbitSample.s0.s02.img}}"><span>{{webbitSample.s0.s02.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s03.json}}"><img
+          data-src="{{webbitSample.s0.s03.img}}"><span>{{webbitSample.s0.s03.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s04.json}}"><img
+          data-src="{{webbitSample.s0.s04.img}}"><span>{{webbitSample.s0.s04.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s05.json}}"><img
+          data-src="{{webbitSample.s0.s05.img}}"><span>{{webbitSample.s0.s05.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s06.json}}"><img
+          data-src="{{webbitSample.s0.s06.img}}"><span>{{webbitSample.s0.s06.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s07.json}}"><img
+          data-src="{{webbitSample.s0.s07.img}}"><span>{{webbitSample.s0.s07.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s08.json}}"><img
+          data-src="{{webbitSample.s0.s08.img}}"><span>{{webbitSample.s0.s08.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s09.json}}"><img
+          data-src="{{webbitSample.s0.s09.img}}"><span>{{webbitSample.s0.s09.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s10.json}}"><img
+          data-src="{{webbitSample.s0.s10.img}}"><span>{{webbitSample.s0.s10.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s12.json}}"><img
+          data-src="{{webbitSample.s0.s12.img}}"><span>{{webbitSample.s0.s12.text}}</span></div>
+      <div data-source="{{webbitSample.s0.s11.json}}"><img
+          data-src="{{webbitSample.s0.s11.img}}"><span>{{webbitSample.s0.s11.text}}</span></div>
+      <h3>{{webbitSampleTitleH3.s1}}</h3>
+      <div data-source="{{webbitSample.s1.s01.json}}"><img
+          data-src="{{webbitSample.s1.s01.img}}"><span>{{webbitSample.s1.s01.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s02.json}}"><img
+          data-src="{{webbitSample.s1.s02.img}}"><span>{{webbitSample.s1.s02.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s03.json}}"><img
+          data-src="{{webbitSample.s1.s03.img}}"><span>{{webbitSample.s1.s03.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s04.json}}"><img
+          data-src="{{webbitSample.s1.s04.img}}"><span>{{webbitSample.s1.s04.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s05.json}}"><img
+          data-src="{{webbitSample.s1.s05.img}}"><span>{{webbitSample.s1.s05.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s06.json}}"><img
+          data-src="{{webbitSample.s1.s06.img}}"><span>{{webbitSample.s1.s06.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s07.json}}"><img
+          data-src="{{webbitSample.s1.s07.img}}"><span>{{webbitSample.s1.s07.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s08.json}}"><img
+          data-src="{{webbitSample.s1.s08.img}}"><span>{{webbitSample.s1.s08.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s09.json}}"><img
+          data-src="{{webbitSample.s1.s09.img}}"><span>{{webbitSample.s1.s09.text}}</span></div>
+      <div data-source="{{webbitSample.s1.10.json}}"><img
+          data-src="{{webbitSample.s1.s10.img}}"><span>{{webbitSample.s1.s10.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s11.json}}"><img
+          data-src="{{webbitSample.s1.s11.img}}"><span>{{webbitSample.s1.s11.text}}</span></div>
+      <div data-source="{{webbitSample.s1.s12.json}}"><img
+          data-src="{{webbitSample.s1.s12.img}}"><span>{{webbitSample.s1.s12.text}}</span></div>
+      <h3>{{webbitSampleTitleH3.bits}}</h3>
+      <div data-source="{{webbitSample.bits.s01.json}}"><img
+          data-src="{{webbitSample.bits.s01.img}}"><span>{{webbitSample.bits.s01.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s02.json}}"><img
+          data-src="{{webbitSample.bits.s02.img}}"><span>{{webbitSample.bits.s02.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s03.json}}"><img
+          data-src="{{webbitSample.bits.s03.img}}"><span>{{webbitSample.bits.s03.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s04.json}}"><img
+          data-src="{{webbitSample.bits.s04.img}}"><span>{{webbitSample.bits.s04.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s05.json}}"><img
+          data-src="{{webbitSample.bits.s05.img}}"><span>{{webbitSample.bits.s05.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s06.json}}"><img
+          data-src="{{webbitSample.bits.s06.img}}"><span>{{webbitSample.bits.s06.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s07.json}}"><img
+          data-src="{{webbitSample.bits.s07.img}}"><span>{{webbitSample.bits.s07.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s08.json}}"><img
+          data-src="{{webbitSample.bits.s08.img}}"><span>{{webbitSample.bits.s08.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s09.json}}"><img
+          data-src="{{webbitSample.bits.s09.img}}"><span>{{webbitSample.bits.s09.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s10.json}}"><img
+          data-src="{{webbitSample.bits.s10.img}}"><span>{{webbitSample.bits.s10.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s11.json}}"><img
+          data-src="{{webbitSample.bits.s11.img}}"><span>{{webbitSample.bits.s11.text}}</span></div>
+      <div data-source="{{webbitSample.bits.s12.json}}"><img
+          data-src="{{webbitSample.bits.s12.img}}"><span>{{webbitSample.bits.s12.text}}</span></div>
+      <h3>{{webbitSampleTitleH3.bita}}</h3>
+      <div data-source="{{webbitSample.bita.s01.json}}"><img
+          data-src="{{webbitSample.bita.s01.img}}"><span>{{webbitSample.bita.s01.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s02.json}}"><img
+          data-src="{{webbitSample.bita.s02.img}}"><span>{{webbitSample.bita.s02.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s03.json}}"><img
+          data-src="{{webbitSample.bita.s03.img}}"><span>{{webbitSample.bita.s03.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s04.json}}"><img
+          data-src="{{webbitSample.bita.s04.img}}"><span>{{webbitSample.bita.s04.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s05.json}}"><img
+          data-src="{{webbitSample.bita.s05.img}}"><span>{{webbitSample.bita.s05.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s06.json}}"><img
+          data-src="{{webbitSample.bita.s06.img}}"><span>{{webbitSample.bita.s06.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s07.json}}"><img
+          data-src="{{webbitSample.bita.s07.img}}"><span>{{webbitSample.bita.s07.text}}</span></div>
+      <div data-source="{{webbitSample.bita.s08.json}}"><img
+          data-src="{{webbitSample.bita.s08.img}}"><span>{{webbitSample.bita.s08.text}}</span></div>
+    </div>
+  </div>
+</div>
+<div id="right-area">
+  <span id="simulator-reset">↻</span>
+  <div id="right-bar-area">
+    <div id="right-area-resize-bar"></div>
+  </div>
+  <div id="right-area-toggle"><i class="icon-chevron-with-circle-right"></i></div>
+  <iframe id="simulator-frame" src="simulator/dist/index.html"></iframe>
+
+  <div id="demo-area">
+    <div id="demo-resize-btn"><i class="icon-enlarge"></i></div>
+    <div class="demo-area-content">
+      <select id="demo-select" style="display:none;">
+        <option value="demo-edu">{{demoAreaSelect1}}</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div id="simulator-area" class="init">
+  <div class="resize-area resize-bar-left"></div>
+  <div class="resize-area resize-bar-right"></div>
+  <div class="resize-area resize-bar-bottom"></div>
+  <div class="resize-area resize-bar-top"></div>
+  <div class="resize-area resize-bar-top-left"></div>
+  <div class="resize-area resize-bar-top-right"></div>
+  <div class="resize-area resize-bar-bottom-left"></div>
+  <div class="resize-area resize-bar-bottom-right"></div>
+  <div class="simulator-area-content">
+    <div class="close-btn"></div>
+    <div class="icon-enlarge"></div>
+    <div class="icon-shrink"></div>
+  </div>
+</div>
+<div id="content_xml" class="content"></div>

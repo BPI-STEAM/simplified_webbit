@@ -1,0 +1,14 @@
+{
+  "types": ["get_weather","get_weather_aqi","get_weather_radar","get_weather_observe","get_weather_forecast","get_weather_reservoir","get_weather_quake"],
+  "category": "catEduExtension",
+  "scripts": [
+    "blockly/blocks.js",
+    "blockly/javascript.js"
+  ],
+  "dependencies": [
+    "weather.js"    
+  ],
+  "msg": "blockly/msg",
+  "blocksMsg": "blockly/msg/blocks",
+  "toolbox": "blockly/toolbox.xml"
+}
