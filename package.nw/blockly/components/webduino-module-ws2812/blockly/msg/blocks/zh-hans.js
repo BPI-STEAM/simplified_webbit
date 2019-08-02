@@ -1,5 +1,5 @@
 // WS2812
-Blockly.Msg.WEBDUINO_WS2812_PIN = "全彩点矩阵，脚位";
+Blockly.Msg.WEBDUINO_WS2812_PIN = "全彩点矩阵，引脚";
 Blockly.Msg.WEBDUINO_WS2812_LED = "，LED 数量";
 Blockly.Msg.WEBDUINO_WS2812_LED_SET = "设定";
 Blockly.Msg.WEBDUINO_WS2812_LED_NUMBER = "第";
