@@ -1152,7 +1152,7 @@ Blockly.JavaScript['interval'] = function (block) {
 
 Blockly.JavaScript['delay'] = function (block) {
   var value_secs_ = Blockly.JavaScript.valueToCode(block, 'secs_', Blockly.JavaScript.ORDER_NONE);
-  var code = 'await delay(' + value_secs_ + '); //delay\n';
+  var code = 'await delay(' + value_secs_ + ', true); //delay\n';
   return code;
 };
 

@@ -36,15 +36,15 @@ var MSG = {
   catLoops: "循环",
   catMath: "数学",
   catText: "文本",
-  catLists: "数组",
+  catLists: "串行",
   catColour: "颜色",
   catVariables: "变量",
   catFunctions: "函数",
   catExec: "等待",
   catRepeat: "状态切换",
-  catBoardGroup: "开发板",
-  catBoard: "开发板",
-  catPin: "输入&输出",
+  catBoardGroup: "开发板控制",
+  catBoard: "Web:Bit 开发板",
+  catPin: "I/O 引脚",
   catLed: "LED 灯",
   catRelay: "继电器",
   catRGBLed: "三色 LED",
@@ -64,11 +64,11 @@ var MSG = {
   errorOccur: "出现错误",
   linkAlert: "透过此链接分享您的积木组：\n\n%1",
   hashError: "对不起，「%1」并未对应任何已保存的进程。",
-  xmlError: "文件已损坏或存在未知积木，故无法加载。",
+  xmlError: "存档已损坏或存在未知积木，故无法加载。",
   badXml: "解析 XML 时出现错误：\n%1\n\n选择'确定'以放弃您的更改，或选择'取消'以进一步编辑 XML。",
   catDataTransfer: "资料传输",
   catConsole: "控制",
-  catDetect: "系统功能",
+  catDetect: "检测",
   catEduExtension: "扩展功能",
   catWeather: "气象信息",
   catMathOther: "数据转换",
@@ -94,7 +94,7 @@ var MSG = {
   catKeyCode: "键盘操作",
   catPlus: "进阶",
   catStandard: "基本功能",
-  catMax7219: "矩阵 LED ",
+  catMax7219: "LED 矩阵",
   catMP3: "MP3 播放器",
   catSSD1306: "OLED 屏幕",
   catSoil: "土壤湿度检测",
@@ -141,10 +141,10 @@ var MSG = {
   demoAreaRemoteDisplay: "显示",
   samples1: "基础操作",
   samples1_1: "LED",
-  samples1_2: "矩阵 LED",
+  samples1_2: "全彩 LED",
   samples1_3: "蜂鸣器",
   samples1_4: "伺服电机",
-  samples1_5: "矩阵 LED ",
+  samples1_5: "LED 矩阵",
   samples2: "传感器应用",
   samples2_1: "超声波检测距离",
   samples2_2: "检测环境温湿度",
@@ -154,9 +154,9 @@ var MSG = {
   samples2_6: "检测土壤湿度",
   samples2_7: "检测三轴加速度",
   samples2_8: "检测RFID识别码",
-  samples3: "输入&输出",
+  samples3: "I/O 引脚",
   samples3_1: "操控两颗 LED",
-  samples3_2: "操控矩阵 LED",
+  samples3_2: "操控全彩 LED",
   samples4: "Youtube 应用",
   samples4_1: "RFID 切换视频",
   samples4_2: "按钮开关控制播放",
@@ -170,11 +170,11 @@ var MSG = {
   samples5_6: "自走车 ( 虚拟遥控器 )",
   samples5_7: "资料库记录温湿度",
   samples5_8: "RFID 简易门禁系统",
-  samples5_9: "矩阵 LED 显示温度",
+  samples5_9: "LED 矩阵显示温度",
   samples5_10: "闹钟 ( 蜂鸣器 + LED矩阵 )",
   samples6: "开发板联动",
   samples6_1: "土壤湿度 + LED",
-  samples6_2: "超声波 + 矩阵 LED ",
+  samples6_2: "超声波 + LED 矩阵",
   samplesBit0: "Webduino Bit 小游戏",
   samplesBit1: "Webduino Bit 全彩LED矩阵",
   samplesBit0_1: "贪吃蛇 ( 按钮开关 )",
@@ -216,28 +216,28 @@ var MSG = {
   enableBlocksTitle: "选择启用积木",
   customBlockRemove: "移除",
   customBlockAdd: "加入",
-  customBlockInvalid: "加载的文件有误",
-  customBlockNotFound: "找不到指定文件，请确认链接是否正确",
-  customBlockUnknownError: "载入文件时发生位置错误，请确认链接是否正确",
+  customBlockInvalid: "加载的存档有误",
+  customBlockNotFound: "找不到指定存档，请确认链接是否正确",
+  customBlockUnknownError: "载入存档时发生位置错误，请确认链接是否正确",
   customBlockLinkInvalid: "输入的链接有误，请确认链接是否正确",
-  customBlockMIMEInvalid: "无法使用文件，请确认 MIME 类型是否正确",
+  customBlockMIMEInvalid: "无法使用存档，请确认 MIME 类型是否正确",
   customBlockInUse: "积木使用中无法移除",
   customBlockImportSuccess: "导入的积木已可使用",
   customBlockRemoveSuccess: "已移除指定积木",
   importTitle: "导入",
   importButton: "导入",
-  chooseFileButton: "选择文件",
+  chooseFileButton: "选择存档",
   importFromUrlButton: "由链接导入...",
   importUrlText: "输入由体验版 Blockly 导出的链接",
   importDescription: "导入先前备份的专案",
   importWarning: "继续导入将会覆盖目前的积木，确定要继续幺？",
-  importInvalid: "导入的文件格式有误",
+  importInvalid: "导入的存档格式有误",
   exportTitle: "导出",
   exportDescription: "导出目前专案的积木，并下载备份",
   exportButton: "导出",
   customTitle: "使用自有积木",
   customButton: "导入",
-  customDescription: "请输入自有积木定义文件 %1 链接，并注意下列事项",
+  customDescription: "请输入自有积木定义存档 %1 链接，并注意下列事项",
   customNotice1: "确保链接有效，链接必须为安全链接 (HTTPS)",
   customNotice3: "检查进程代码是否无误",
   customeBlockAccessDenied: "无法移除共享专案的自订积木，复制专案后才可进行编辑",
@@ -245,28 +245,29 @@ var MSG = {
   updateChrome: "请更新 Chrome 版本，以获得更好的使用体验！",
   linkQrcode: "预览画面",
   useHttpForWebsocket: "使用 Websocket 链接，请使用非加密链接 (HTTP)",
-  openLink: "打开链接",
+  openLink: "开启链接",
   otherFunctions: "其他功能",
   cancel: "取消",
   loginPlatform: "账号登录",
   loginToUseCustomBlock: "请先登录账号！",
-  loadProjectFailed: "无法读取文件",
-  loginToReadLink: "请登录后，再重新打开链接！",
+  loadProjectFailed: "无法读取存档",
+  loginToReadLink: "请登录后，再重新开启链接！",
+  imgUrl: "图片位址",
   linkExpired: "链接失效",
-  catBitLedMatrix: "矩阵 LED ",
-  catBitPin: "输入&输出",
+  catBitLedMatrix: "LED 矩阵",
+  catBitPin: "I/O 引脚",
   catBitButton: "按钮开关",
-  catBitDetected: "光线＆温度",
+  catBitDetected: "检测光线＆温度",
   catBitBuzzer: "音乐＆声音",
-  catBitMpu9250: "运动&姿态",
-  catPin:"输入&输出",
+  catBitMpu9250: "九轴体感检测",
+  catPin:"I/O 引腳",
   catBitDemoMonster: "怪兽控制",
   webbitTitle: "Web:Bit 教育版",
   webbitMenuBlock: "积木",
-  webbitMenuJS: "代码",
-  webbitMenuFile: "文件",
-  webbitMenuFileLoad: "打开",
-  webbitMenuFileSave: "保存",
+  webbitMenuJS: "进程代码",
+  webbitMenuFile: "存档",
+  webbitMenuFileLoad: "开启",
+  webbitMenuFileSave: "储存",
   webbitMenuFileShare: "分享",
   webbitMenuSample: "范例",
   webbitMenuTutor: "教学",
@@ -274,7 +275,7 @@ var MSG = {
   webbitMenuMore: "更多",
   webbitMenuMoreCloud: "云端部署",
   webbitMenuMoreExtension: "扩展功能",
-  webbitMenuStore: "购买商店",
+  webbitMenuStore: "購買套件",
   webbitMenuMoreWifiOnly: "Wi-Fi 限制",
   webbitMenuMoreCommingSoon: "即将推出",
   webbitMenuMoreDownload: "下载安装",
@@ -313,228 +314,228 @@ var MSG = {
       s01: {
         text: "小怪兽说话",
         img: "samples/zh-hans/s0-01.jpg",
-        json: "samples/s0-01.json"
+        json: "samples/zh-hans/s0-01.json"
       },
       s02: {
         text: "电机小怪兽就会放大",
         img: "samples/zh-hans/s0-02.jpg",
-        json: "samples/s0-02.json"
+        json: "samples/zh-hans/s0-02.json"
       },
       s03: {
         text: "键盘控制小怪兽",
         img: "samples/zh-hans/s0-03.jpg",
-        json: "samples/s0-03.json"
+        json: "samples/zh-hans/s0-03.json"
       },
       s04: {
         text: "小怪兽自动旋转",
         img: "samples/zh-hans/s0-04.jpg",
-        json: "samples/s0-04.json"
+        json: "samples/zh-hans/s0-04.json"
       },
       s05: {
         text: "小怪兽移动时碰到边缘反弹",
         img: "samples/zh-hans/s0-05.jpg",
-        json: "samples/s0-05.json"
+        json: "samples/zh-hans/s0-05.json"
       },
       s06: {
         text: "小怪兽报时 ( 小时钟 )",
         img: "samples/zh-hans/s0-06.jpg",
-        json: "samples/s0-06.json"
+        json: "samples/zh-hans/s0-06.json"
       },
       s07: {
         text: "小怪兽比较数字大小",
         img: "samples/zh-hans/s0-07.jpg",
-        json: "samples/s0-07.json"
+        json: "samples/zh-hans/s0-07.json"
       },
       s08: {
         text: "小怪兽说出随机内容",
         img: "samples/zh-hans/s0-08.jpg",
-        json: "samples/s0-08.json"
+        json: "samples/zh-hans/s0-08.json"
       },
       s09: {
         text: "小怪兽上下移动",
         img: "samples/zh-hans/s0-09.jpg",
-        json: "samples/s0-09.json"
+        json: "samples/zh-hans/s0-09.json"
       },
       s10: {
         text: "点击小怪兽说话发声",
         img: "samples/zh-hans/s0-10.jpg",
-        json: "samples/s0-10.json"
+        json: "samples/zh-hans/s0-10.json"
       },
       s11: {
         text: "小怪兽跟随鼠标移动并旋转",
         img: "samples/zh-hans/s0-11.jpg",
-        json: "samples/s0-11.json"
+        json: "samples/zh-hans/s0-11.json"
       },
       s12: {
         text: "点击小怪兽发出各种音效",
         img: "samples/zh-hans/s0-12.jpg",
-        json: "samples/s0-12.json"
+        json: "samples/zh-hans/s0-12.json"
       }
     },
     s1: {
       s01: {
         text: "小怪兽边移动边旋转",
         img: "samples/zh-hans/s1-01.jpg",
-        json: "samples/s1-01.json"
+        json: "samples/zh-hans/s1-01.json"
       },
       s02: {
         text: "小怪兽自动依序改变尺寸",
         img: "samples/zh-hans/s1-02.jpg",
-        json: "samples/s1-02.json"
+        json: "samples/zh-hans/s1-02.json"
       },
       s03: {
         text: "声控改变小怪兽尺寸",
         img: "samples/zh-hans/s1-03.jpg",
-        json: "samples/s1-03.json"
+        json: "samples/zh-hans/s1-03.json"
       },
       s04: {
         text: "乐透电脑自动选号",
         img: "samples/zh-hans/s1-04.jpg",
-        json: "samples/s1-04.json"
+        json: "samples/zh-hans/s1-04.json"
       },
       s05: {
         text: "小怪兽依序说话",
         img: "samples/zh-hans/s1-05.jpg",
-        json: "samples/s1-05.json"
+        json: "samples/zh-hans/s1-05.json"
       },
       s06: {
         text: "依序输入文本让小怪兽说话",
         img: "samples/zh-hans/s1-06.jpg",
-        json: "samples/s1-06.json"
+        json: "samples/zh-hans/s1-06.json"
       },
       s07: {
         text: "输入文本指定小怪兽说话",
         img: "samples/zh-hans/s1-07.jpg",
-        json: "samples/s1-07.json"
+        json: "samples/zh-hans/s1-07.json"
       },
       s08: {
         text: "小怪兽连续问答",
         img: "samples/zh-hans/s1-08.jpg",
-        json: "samples/s1-08.json"
+        json: "samples/zh-hans/s1-08.json"
       },
       s09: {
         text: "小怪兽学九九乘法表",
         img: "samples/zh-hans/s1-09.jpg",
-        json: "samples/s1-09.json"
+        json: "samples/zh-hans/s1-09.json"
       },
       s10: {
         text: "小怪兽语音朗读稿件",
         img: "samples/zh-hans/s1-10.jpg",
-        json: "samples/s1-10.json"
+        json: "samples/zh-hans/s1-10.json"
       },
       s11: {
         text: "键盘控制小怪兽，碰到其他小怪兽就说话",
         img: "samples/zh-hans/s1-11.jpg",
-        json: "samples/s1-11.json"
+        json: "samples/zh-hans/s1-11.json"
       },
       s12: {
         text: "小怪兽描述舞台尺寸，改变高度时改变颜色",
         img: "samples/zh-hans/s1-12.jpg",
-        json: "samples/s1-12.json"
+        json: "samples/zh-hans/s1-12.json"
       }
     },
     bits: {
       s01: {
         text: "LED 矩阵展示图形",
         img: "samples/zh-hans/bit-s-01.jpg",
-        json: "samples/bit-s-01.json"
+        json: "samples/zh-hans/bit-s-01.json"
       },
       s02: {
         text: "LED 矩阵心跳动画",
         img: "samples/zh-hans/bit-s-02.jpg",
-        json: "samples/bit-s-02.json"
+        json: "samples/zh-hans/bit-s-02.json"
       },
       s03: {
         text: "点击小怪兽切换图案",
         img: "samples/zh-hans/bit-s-03.jpg",
-        json: "samples/bit-s-03.json"
+        json: "samples/zh-hans/bit-s-03.json"
       },
       s04: {
         text: "按钮开关切换见到见到、石头、布",
         img: "samples/zh-hans/bit-s-04.jpg",
-        json: "samples/bit-s-04.json"
+        json: "samples/zh-hans/bit-s-04.json"
       },
       s05: {
         text: "按钮开关控制小怪兽尺寸",
         img: "samples/zh-hans/bit-s-05.jpg",
-        json: "samples/bit-s-05.json"
+        json: "samples/zh-hans/bit-s-05.json"
       },
       s06: {
         text: "按钮开关控制小怪兽自动旋转、停止旋转",
         img: "samples/zh-hans/bit-s-06.jpg",
-        json: "samples/bit-s-06.json"
+        json: "samples/zh-hans/bit-s-06.json"
       },
       s07: {
         text: "小怪兽说出光照度和温度",
         img: "samples/zh-hans/bit-s-07.jpg",
-        json: "samples/bit-s-07.json"
+        json: "samples/zh-hans/bit-s-07.json"
       },
       s08: {
         text: "光照度切换LED 矩阵图形",
         img: "samples/zh-hans/bit-s-08.jpg",
-        json: "samples/bit-s-08.json"
+        json: "samples/zh-hans/bit-s-08.json"
       },
       s09: {
         text: "蜂鸣器播放音乐",
         img: "samples/zh-hans/bit-s-09.jpg",
-        json: "samples/bit-s-09.json"
+        json: "samples/zh-hans/bit-s-09.json"
       },
       s10: {
         text: "点击不同小怪兽，播放不同音乐",
         img: "samples/zh-hans/bit-s-10.jpg",
-        json: "samples/bit-s-10.json"
+        json: "samples/zh-hans/bit-s-10.json"
       },
       s11: {
         text: "旋转开发板切换图案",
         img: "samples/zh-hans/bit-s-11.jpg",
-        json: "samples/bit-s-11.json"
+        json: "samples/zh-hans/bit-s-11.json"
       },
       s12: {
         text: "电子骰子",
         img: "samples/zh-hans/bit-s-12.jpg",
-        json: "samples/bit-s-12.json"
+        json: "samples/zh-hans/bit-s-12.json"
       }
     },
     bita: {
       s01: {
         text: "输入文本控制灯号",
         img: "samples/zh-hans/bit-a-01.jpg",
-        json: "samples/bit-a-01.json"
+        json: "samples/zh-hans/bit-a-01.json"
       },
       s02: {
         text: "灯号依序水平移动",
         img: "samples/zh-hans/bit-a-02.jpg",
-        json: "samples/bit-a-02.json"
+        json: "samples/zh-hans/bit-a-02.json"
       },
       s03: {
         text: "灯号依序绕着四周移动",
         img: "samples/zh-hans/bit-a-03.jpg",
-        json: "samples/bit-a-03.json"
+        json: "samples/zh-hans/bit-a-03.json"
       },
       s04: {
         text: "灯号水平反弹移动",
         img: "samples/zh-hans/bit-a-04.jpg",
-        json: "samples/bit-a-04.json"
+        json: "samples/zh-hans/bit-a-04.json"
       },
       s05: {
         text: "灯号反弹球效果",
         img: "samples/zh-hans/bit-a-05.jpg",
-        json: "samples/bit-a-05.json"
+        json: "samples/zh-hans/bit-a-05.json"
       },
       s06: {
         text: "键盘操控灯号移动",
         img: "samples/zh-hans/bit-a-06.jpg",
-        json: "samples/bit-a-06.json"
+        json: "samples/zh-hans/bit-a-06.json"
       },
       s07: {
         text: "转动开发板控制灯号移动",
         img: "samples/zh-hans/bit-a-07.jpg",
-        json: "samples/bit-a-07.json"
+        json: "samples/zh-hans/bit-a-07.json"
       },
       s08: {
         text: "加速度拳力检测器",
         img: "samples/zh-hans/bit-a-08.jpg",
-        json: "samples/bit-a-08.json"
+        json: "samples/zh-hans/bit-a-08.json"
       },
     }
   }

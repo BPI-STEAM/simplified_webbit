@@ -13,35 +13,30 @@ Blockly.JavaScript['variables_change'] = function (block) {
   return code;
 };
 
-function genLoopName() {
-  let t = Math.floor(Math.random() * 10000000000);
-  return t;
-}
-
 //簡化版無窮迴圈積木
 Blockly.JavaScript['controls_loop_forever'] = function (block) {
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
   let checkbox_async = block.getFieldValue('async');
+  let varName = _loopName_();
   if (statements_do_.indexOf('await delay') != -1) {
-    statements_do_ = statements_do_.replace(/\); \/\/delay/g, ', _stopDelay_);\n');
+    statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
-  let loopName = `loop${genLoopName()}`;
   if (checkbox_async == 'TRUE') {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-      '(async function(){\n' +
-      '  while(_loop_["' + loopName + '"]){\n' +
-      '  var _stopDelay_ = _loop_["' + loopName + '"];' +
+    code = '(async function(){\n' +
+      ' let ' + varName + ' = _loopName_();\n' +
+      ' _startLoop_(' + varName + ');\n' +
+      '  while(_loop_[' + varName + ']){\n' +
       statements_do_ +
-      '    await delay(0.001);\n' +
+      '    await delay(0.001, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-      'while(_loop_["' + loopName + '"]){\n' +
-      '  var _stopDelay_ = _loop_["' + loopName + '"];' +
+    code = 'let ' + varName + ' = _loopName_();\n' +
+      '_startLoop_(' + varName + ');\n' +
+      'while(_loop_[' + varName + ']){\n' +
       statements_do_ +
-      '  await delay(0.001);\n' +
+      '  await delay(0.001, true);\n' +
       '}\n\n';
   }
   return code;
@@ -51,26 +46,26 @@ Blockly.JavaScript['controls_loop_forever_while_do'] = function (block) {
   let value_val_ = Blockly.JavaScript.valueToCode(block, 'val_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
+  let varName = _loopName_();
   if (statements_do_.indexOf('await delay') != -1) {
-    statements_do_ = statements_do_.replace(/\); \/\/delay/g, ', _stopDelay_);\n');
+    statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
-  let loopName = `loop${genLoopName()}`;
   if (checkbox_async == 'TRUE') {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-    '(async function(){\n' +
-      '  while(_loop_["' + loopName + '"] && ' + value_val_ + '){\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+    code = '(async function(){\n' +
+      ' let ' + varName + ' = _loopName_();\n' +
+      ' _startLoop_(' + varName + ');\n' +
+      '  while(_loop_[' + varName + '] && ' + value_val_ + '){\n' +
       statements_do_ +
-      '    await delay(0.001);\n' +
+      '    await delay(0.001, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-    'while(_loop_["' + loopName + '"] && ' + value_val_ + '){\n' +
-    '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+    code = 'let ' + varName + ' = _loopName_();\n' +
+      '_startLoop_(' + varName + ', true);\n' +
+      'while(_loop_[' + varName + '] && ' + value_val_ + '){\n' +
       statements_do_ +
-      '  await delay(0.001);\n\n' +
+      '  await delay(0.001, true);\n\n' +
       '}\n';
   }
   return code;
@@ -94,28 +89,28 @@ Blockly.JavaScript['controls_repeat_ext_can_stop'] = function (block) {
   let value_times_ = Blockly.JavaScript.valueToCode(block, 'times_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
+  let varName = _loopName_();
   if (statements_do_.indexOf('await delay') != -1) {
-    statements_do_ = statements_do_.replace(/\); \/\/delay/g, ', _stopDelay_);\n');
+    statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
-  let loopName = `loop${genLoopName()}`;
   if (checkbox_async == 'TRUE') {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-      '(async function(){\n' +
+    code = '(async function(){\n' +
+      ' let ' + varName + ' = _loopName_();\n' +
+      ' _startLoop_(' + varName + ');\n' +
       '  for (let count = 0; count < ' + value_times_ + '; count++) {\n' +
-      '    if(!_loop_["' + loopName + '"]){break;}\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '    if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '    await delay(0.001);\n' +
+      '    await delay(0.001, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = '_addLoop_("' + loopName + '", true);\n' +
+    code = 'let ' + varName + ' = _loopName_();\n' +
+      '_startLoop_(' + varName + ');\n' +
       'for (let count = 0; count < ' + value_times_ + '; count++) {\n' +
-      '  if(!_loop_["' + loopName + '"]){break;}\n' +
-    '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '  if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '  await delay(0.001);\n\n' +
+      '  await delay(0.001, true);\n\n' +
       '}\n';
   }
   return code;
@@ -128,11 +123,11 @@ Blockly.JavaScript['controls_for_can_stop'] = function (block) {
   let value_to_ = Blockly.JavaScript.valueToCode(block, 'to_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
+  let varName = _loopName_();
   if (statements_do_.indexOf('await delay') != -1) {
-    statements_do_ = statements_do_.replace(/\); \/\/delay/g, ', _stopDelay_);\n');
+    statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code, mark;
-  let loopName = `loop${genLoopName()}`;
   if (!Blockly.isNumber(value_from_) || !Blockly.isNumber(value_to_)) {
     mark = 'var ' + variable_item_ + ' = ' + value_from_ + '; ' + variable_item_ + ' <= ' + value_to_ + '; ' + variable_item_ + '+=' + value_num_;
   } else {
@@ -143,22 +138,22 @@ Blockly.JavaScript['controls_for_can_stop'] = function (block) {
     }
   }
   if (checkbox_async == 'TRUE') {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-      '(async function(){\n' +
+    code = '(async function(){\n' +
+      ' let ' + varName + ' = _loopName_();\n'+
+      ' _startLoop_(' + varName + ');\n' +
       '  for (' + mark + ') {\n' +
-      '    if(!_loop_["' + loopName + '"]){break;}\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '    if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '    await delay(0.001);\n' +
+      '    await delay(0.001, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = '_addLoop_("' + loopName + '", true);\n' +
+    code = 'let ' + varName + ' = _loopName_();\n'+
+      '_startLoop_(' + varName + ');\n' +
       'for (' + mark + ') {\n' +
-      '  if(!_loop_["' + loopName + '"]){break;}\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '  if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '  await delay(0.001);\n' +
+      '  await delay(0.001, true);\n' +
       '}\n\n';
   }
   return code;
@@ -169,32 +164,32 @@ Blockly.JavaScript['controls_foreach_can_stop'] = function (block) {
   let value_array_ = Blockly.JavaScript.valueToCode(block, 'array_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
+  let varName = _loopName_();
   if (statements_do_.indexOf('await delay') != -1) {
-    statements_do_ = statements_do_.replace(/\); \/\/delay/g, ', _stopDelay_);\n');
+    statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
-  let loopName = `loop${genLoopName()}`;
   if (checkbox_async == 'TRUE') {
-    code = '_addLoop_("' + loopName + '", true);\n' +
-      'let ' + variable_item_ + '_list = ' + value_array_ + ';\n' +
-      '(async function(){\n' +
+    code = '(async function(){\n' +
+      ' let ' + varName + ' = _loopName_();\n' +
+      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + variable_item_ + '_list = ' + value_array_ + ';\n' +
       '  for (let ' + variable_item_ + '_index in ' + variable_item_ + '_list) {\n' +
       '    ' + variable_item_ + ' = ' + variable_item_ + '_list[' + variable_item_ + '_index];\n' +
-      '    if(!_loop_["' + loopName + '"]){break;}\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '    if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '    await delay(0.001);\n' +
+      '    await delay(0.001, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = '_addLoop_("' + loopName + '", true);\n' +
+    code = 'let ' + varName + ' = _loopName_();\n' +
+      '_startLoop_(' + varName + ');\n' +
       'let ' + variable_item_ + '_list = ' + value_array_ + ';\n' +
       'for (let ' + variable_item_ + '_index in ' + variable_item_ + '_list) {\n' +
       '  ' + variable_item_ + ' = ' + variable_item_ + '_list[' + variable_item_ + '_index];\n' +
-      '  if(!_loop_["' + loopName + '"]){break;}\n' +
-      '    var _stopDelay_ = _loop_["' + loopName + '"];' +
+      '  if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
-      '  await delay(0.001);\n\n' +
+      '  await delay(0.001, true);\n\n' +
       '}\n';
   }
   return code;
