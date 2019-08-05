@@ -1,4 +1,4 @@
-Blockly.Msg.WEBDUINO_SOUND = "声音侦测传感器，脚位";
+Blockly.Msg.WEBDUINO_SOUND = "声音侦测传感器，引脚";
 Blockly.Msg.WEBDUINO_SOUND_WHEN = "当";
 Blockly.Msg.WEBDUINO_SOUND_STATUS_DETECTED = "有";
 Blockly.Msg.WEBDUINO_SOUND_STATUS_ENDED = "没有";
