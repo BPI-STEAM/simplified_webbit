@@ -4,7 +4,8 @@
     "basic_irrecv_value",
     "basic_irled_launch",
     "basic_ultrasonic_distance",
-    "basic_servo_angle"
+    "basic_servo_angle",
+    "basic_servo_angle_custom"
   ],
   "category": "catEduExtension",
   "scripts": [

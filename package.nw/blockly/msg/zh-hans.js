@@ -43,6 +43,7 @@ var MSG = {
   catExec: "等待",
   catRepeat: "状态切换",
   catBoardGroup: "开发板",
+  catWebBit: "Web:Bit",
   catBoard: "开发板",
   catPin: "输入&输出",
   catLed: "LED 灯",
@@ -445,12 +446,12 @@ var MSG = {
         json: "samples/zh-hans/bit-s-02.json"
       },
       s03: {
-        text: "点击按钮切换图案",
+        text: "点击小怪兽切换图案",
         img: "samples/zh-hans/bit-s-03.jpg",
         json: "samples/zh-hans/bit-s-03.json"
       },
       s04: {
-        text: "点击按钮使出剪刀、石头、布",
+        text: "按钮开关切换见到见到、石头、布",
         img: "samples/zh-hans/bit-s-04.jpg",
         json: "samples/zh-hans/bit-s-04.json"
       },

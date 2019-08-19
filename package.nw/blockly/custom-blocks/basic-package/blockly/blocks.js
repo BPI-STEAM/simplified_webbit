@@ -8,7 +8,7 @@ Blockly.Blocks['basic_irrecv_on'] = {
     this.setNextStatement(true);
     this.setColour(60);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_IR_HELPURL);
   }
 };
 
@@ -19,7 +19,7 @@ Blockly.Blocks['basic_irrecv_value'] = {
     this.setOutput(true);
     this.setColour(60);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_IR_HELPURL);
   }
 };
 
@@ -32,7 +32,7 @@ Blockly.Blocks['basic_irled_launch'] = {
     this.setNextStatement(true);
     this.setColour(60);
     this.setTooltip('');
-    this.setHelpUrl('');
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_IR_HELPURL);
   }
 };
 
@@ -49,7 +49,7 @@ Blockly.Blocks['basic_ultrasonic_distance'] = {
     this.setOutput(true);
     this.setTooltip('');
     this.setColour(60);
-    this.setHelpUrl('');
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_ULTRASONIC_HELPURL);
   }
 };
 
@@ -66,7 +66,23 @@ Blockly.Blocks['basic_servo_angle'] = {
     this.setNextStatement(true);
     this.setTooltip('');
     this.setColour(60);
-    this.setHelpUrl('');
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_SERVO_HELPURL);
+  }
+};
+
+Blockly.Blocks['basic_servo_angle_custom'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WEBDUINO_SERVO)
+      .appendField(new Blockly.FieldDropdown(Code.getPinDropdown('pwm')), "pin_")
+      .appendField(Blockly.Msg.WEBDUINO_SERVO_ANGLE);
+    this.appendValueInput("angle_");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+    this.setColour(60);
+    this.setHelpUrl(Blockly.Msg.WEBBIT_BASIC_SERVO_HELPURL);
   }
 };
 

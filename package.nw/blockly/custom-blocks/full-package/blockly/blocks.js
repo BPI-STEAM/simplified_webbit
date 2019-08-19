@@ -71,6 +71,22 @@ Blockly.Blocks['full_servo_angle'] = {
   }
 };
 
+Blockly.Blocks['full_servo_angle_custom'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WEBDUINO_SERVO)
+      .appendField(new Blockly.FieldDropdown(Code.getPinDropdown('pwm')), "pin_")
+      .appendField(Blockly.Msg.WEBDUINO_SERVO_ANGLE);
+    this.appendValueInput("angle_");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip('');
+    this.setColour(70);
+    this.setHelpUrl('');
+  }
+};
+
 
 
 

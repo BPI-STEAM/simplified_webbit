@@ -13,7 +13,8 @@
     "car_irled_launch",
     "car_ws2812_print",
     "car_ws2812_brightness",
-    "car_ws2812_off"
+    "car_ws2812_off",
+    "car_tcs34725_value"
   ],
   "category": "catEduExtension",
   "scripts": [
@@ -23,11 +24,13 @@
   "dependencies": [
     "WS2812.js",
     "CarTracker.js",
+    "TCS34725.js",
     "BitIR-blockly.js",
     "BitWS2812-blockly.js",
     "BitCarButton-blockly.js",
     "BitCarTracker-blockly.js",
-    "BitUltrasonic-blockly.js"
+    "BitUltrasonic-blockly.js",
+    "BitTCS34725-blockly.js"
   ],
   "msg": "blockly/msg",
   "blocksMsg": "blockly/msg/blocks",

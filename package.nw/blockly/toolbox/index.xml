@@ -433,173 +433,174 @@
   </category>
 
   <sep></sep>
-
-  <category id="catBoard" COLOUR="240">
-    <block type="board"></block>
-  </category>
-  <category id="catBitLedMatrix" COLOUR="250">
-    <block type="bit_matrix_off"></block>
-    <block type="bit_matrix_color_output">
-      <value name="color_input">
-        <block type="colour_picker"></block>
-      </value>
-    </block>
-    <block type="bit_matrix_color_output">
-      <value name="color_input">
-        <block type="bit_matrix_color_array"></block>
-      </value>
-    </block>
-    <block type="bit_matrix_color_output">
-      <value name="color_input">
-        <block type="bit_matrix_emoji">
-          <value name="color_input">
-            <block type="colour_picker">
-              <field name="COLOUR">#ff0000</field>
-            </block>
-          </value>
-        </block>
-      </value>
-    </block>
-    <block type="bit_matrix_color_output">
-      <value name="color_input">
-        <block type="lists_create_with">
-          <mutation items="3"></mutation>
-          <value name="ADD0">
-            <block type="colour_picker">
-              <field name="COLOUR">#ff0000</field>
-            </block>
-          </value>
-          <value name="ADD1">
-            <block type="colour_picker">
-              <field name="COLOUR">#ff0000</field>
-            </block>
-          </value>
-          <value name="ADD2">
-            <block type="colour_picker">
-              <field name="COLOUR">#ff0000</field>
-            </block>
-          </value>
-        </block>
-      </value>
-    </block>
-    <block type="bit_matrix_xy">
-      <value name="x">
-        <block type="math_number">
-          <field name="NUM">1</field>
-        </block>
-      </value>
-      <value name="y">
-        <block type="math_number">
-          <field name="NUM">1</field>
-        </block>
-      </value>
-      <value name="color_input">
-        <block type="colour_picker"></block>
-      </value>
-    </block>
-    <block type="bit_matrix_color_single">
-      <value name="led_">
-        <block type="math_number">
-          <field name="NUM">1</field>
-        </block>
-      </value>
-      <value name="color_">
-        <block type="colour_picker">
-          <field name="COLOUR">#ff0000</field>
-        </block>
-      </value>
-    </block>
-    <block type="bit_matrix_character">
-      <value name="char_">
-        <block type="text">
-          <field name="TEXT"></field>
-        </block>
-      </value>
-      <value name="color_">
-        <block type="colour_picker">
-          <field name="COLOUR">#ff0000</field>
-        </block>
-      </value>
-    </block>
-    <block type="bit_matrix_string_once">
-      <value name="str_">
-        <block type="text">
-          <field name="TEXT">Hello World</field>
-        </block>
-      </value>
-      <value name="color_">
-        <block type="colour_picker">
-          <field name="COLOUR">#ff0000</field>
-        </block>
-      </value>
-      <field name="speed_">2</field>
-    </block>
-    <block type="bit_matrix_brightness">
-      <value name="brightness_">
-        <block type="math_number">
-          <field name="NUM">10</field>
-        </block>
-      </value>
-    </block>
-  </category>
-  <category id="catBitButton" COLOUR="200">
-    <block type="bit_button_event" tags="fly,mark1,bit"></block>
-  </category>
-  <category id="catBitDetected" COLOUR="190">
-    <block type="bit_photocell_val"></block>
-    <block type="bit_temp_val"></block>
-  </category>
-  <category id="catBitBuzzer" COLOUR="180">
-    <block type="buzzer_play_plus">
-      <value name="tone_">
-        <block type="buzzer_tone">
-          <field name="tone_">C5</field>
-        </block>
-      </value>
-      <value name="tempos_">
-        <block type="buzzer_tempo">
-          <field name="tempos_">2</field>
-        </block>
-      </value>
-    </block>
-    <block type="buzzer_play_plus_mute">
-      <value name="tempos_">
-        <block type="buzzer_tempo">
-          <field name="tempos_">2</field>
-        </block>
-      </value>
-    </block>
-    <block type="buzzer_play_music"></block>
-    <block type="buzzer_play_event"></block>
-    <block type="buzzer_tone">
-      <field name="tone_">C5</field>
-    </block>
-    <block type="buzzer_play_plus_mute_tone"></block>
-    <block type="buzzer_tempo">
-      <field name="tempos_">2</field>
-    </block>
-  </category>
-  <category id="catBitMpu9250" COLOUR="130">
-    <block type="mpu9250_detected_type"></block>
-    <block type="mpu9250_val"></block>
-  </category>
-  <category id="catPin" COLOUR="50">
-    <block type="pin_read_digital"></block>
-    <block type="pin_read_analog"></block>
-    <block type="pin_write_analog">
-      <value name="value_">
-        <block type="math_number">
-          <field name="NUM">0</field>
-        </block>
-      </value>
-    </block>
-    <block type="pin_write_digital">
-      <value name="value_">
-        <block type="math_number">
-          <field name="NUM">0</field>
-        </block>
-      </value>
-    </block>
+  <category id="catWebBit" COLOUR="290" index="99" expanded="true">
+    <category id="catBoard" COLOUR="240">
+      <block type="board"></block>
+    </category>
+    <category id="catBitLedMatrix" COLOUR="250">
+      <block type="bit_matrix_off"></block>
+      <block type="bit_matrix_color_output">
+        <value name="color_input">
+          <block type="colour_picker"></block>
+        </value>
+      </block>
+      <block type="bit_matrix_color_output">
+        <value name="color_input">
+          <block type="bit_matrix_color_array"></block>
+        </value>
+      </block>
+      <block type="bit_matrix_color_output">
+        <value name="color_input">
+          <block type="bit_matrix_emoji">
+            <value name="color_input">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+      <block type="bit_matrix_color_output">
+        <value name="color_input">
+          <block type="lists_create_with">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+      <block type="bit_matrix_xy">
+        <value name="x">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="y">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="color_input">
+          <block type="colour_picker"></block>
+        </value>
+      </block>
+      <block type="bit_matrix_color_single">
+        <value name="led_">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="color_">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+      </block>
+      <block type="bit_matrix_character">
+        <value name="char_">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+        <value name="color_">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+      </block>
+      <block type="bit_matrix_string_once">
+        <value name="str_">
+          <block type="text">
+            <field name="TEXT">Hello World</field>
+          </block>
+        </value>
+        <value name="color_">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <field name="speed_">2</field>
+      </block>
+      <block type="bit_matrix_brightness">
+        <value name="brightness_">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </category>
+    <category id="catBitButton" COLOUR="200">
+      <block type="bit_button_event" tags="fly,mark1,bit"></block>
+    </category>
+    <category id="catBitDetected" COLOUR="190">
+      <block type="bit_photocell_val"></block>
+      <block type="bit_temp_val"></block>
+    </category>
+    <category id="catBitBuzzer" COLOUR="180">
+      <block type="buzzer_play_plus">
+        <value name="tone_">
+          <block type="buzzer_tone">
+            <field name="tone_">C5</field>
+          </block>
+        </value>
+        <value name="tempos_">
+          <block type="buzzer_tempo">
+            <field name="tempos_">2</field>
+          </block>
+        </value>
+      </block>
+      <block type="buzzer_play_plus_mute">
+        <value name="tempos_">
+          <block type="buzzer_tempo">
+            <field name="tempos_">2</field>
+          </block>
+        </value>
+      </block>
+      <block type="buzzer_play_music"></block>
+      <block type="buzzer_play_event"></block>
+      <block type="buzzer_tone">
+        <field name="tone_">C5</field>
+      </block>
+      <block type="buzzer_play_plus_mute_tone"></block>
+      <block type="buzzer_tempo">
+        <field name="tempos_">2</field>
+      </block>
+    </category>
+    <category id="catBitMpu9250" COLOUR="130">
+      <block type="mpu9250_detected_type"></block>
+      <block type="mpu9250_val"></block>
+    </category>
+    <category id="catPin" COLOUR="50">
+      <block type="pin_read_digital"></block>
+      <block type="pin_read_analog"></block>
+      <block type="pin_write_analog">
+        <value name="value_">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+      <block type="pin_write_digital">
+        <value name="value_">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </category>
   </category>
   <sep></sep>
 

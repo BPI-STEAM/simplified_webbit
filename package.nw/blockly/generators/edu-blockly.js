@@ -17,26 +17,24 @@ Blockly.JavaScript['variables_change'] = function (block) {
 Blockly.JavaScript['controls_loop_forever'] = function (block) {
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
   let checkbox_async = block.getFieldValue('async');
-  let varName = _loopName_();
+  let varName = _startLoop_();
   if (statements_do_.indexOf('await delay') != -1) {
     statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
   if (checkbox_async == 'TRUE') {
     code = '(async function(){\n' +
-      ' let ' + varName + ' = _loopName_();\n' +
-      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + varName + ' = _startLoop_();\n' +
       '  while(_loop_[' + varName + ']){\n' +
       statements_do_ +
-      '    await delay(0.001, true);\n' +
+      '    await delay(0.005, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = 'let ' + varName + ' = _loopName_();\n' +
-      '_startLoop_(' + varName + ');\n' +
+    code = 'let ' + varName + ' = _startLoop_();\n' +
       'while(_loop_[' + varName + ']){\n' +
       statements_do_ +
-      '  await delay(0.001, true);\n' +
+      '  await delay(0.005, true);\n' +
       '}\n\n';
   }
   return code;
@@ -46,26 +44,24 @@ Blockly.JavaScript['controls_loop_forever_while_do'] = function (block) {
   let value_val_ = Blockly.JavaScript.valueToCode(block, 'val_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
-  let varName = _loopName_();
+  let varName = _startLoop_();
   if (statements_do_.indexOf('await delay') != -1) {
     statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
   if (checkbox_async == 'TRUE') {
     code = '(async function(){\n' +
-      ' let ' + varName + ' = _loopName_();\n' +
-      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + varName + ' = _startLoop_();\n' +
       '  while(_loop_[' + varName + '] && ' + value_val_ + '){\n' +
       statements_do_ +
-      '    await delay(0.001, true);\n' +
+      '    await delay(0.005, true);\n' +
       '  }\n' +
       '})();\n\n';
   } else {
-    code = 'let ' + varName + ' = _loopName_();\n' +
-      '_startLoop_(' + varName + ', true);\n' +
+    code = 'let ' + varName + ' = _startLoop_();\n' +
       'while(_loop_[' + varName + '] && ' + value_val_ + '){\n' +
       statements_do_ +
-      '  await delay(0.001, true);\n\n' +
+      '  await delay(0.005, true);\n\n' +
       '}\n';
   }
   return code;
@@ -89,15 +85,14 @@ Blockly.JavaScript['controls_repeat_ext_can_stop'] = function (block) {
   let value_times_ = Blockly.JavaScript.valueToCode(block, 'times_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
-  let varName = _loopName_();
+  let varName = _startLoop_();
   if (statements_do_.indexOf('await delay') != -1) {
     statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
   if (checkbox_async == 'TRUE') {
     code = '(async function(){\n' +
-      ' let ' + varName + ' = _loopName_();\n' +
-      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + varName + ' = _startLoop_();\n' +
       '  for (let count = 0; count < ' + value_times_ + '; count++) {\n' +
       '    if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
@@ -105,8 +100,7 @@ Blockly.JavaScript['controls_repeat_ext_can_stop'] = function (block) {
       '  }\n' +
       '})();\n\n';
   } else {
-    code = 'let ' + varName + ' = _loopName_();\n' +
-      '_startLoop_(' + varName + ');\n' +
+    code = 'let ' + varName + ' = _startLoop_();\n' +
       'for (let count = 0; count < ' + value_times_ + '; count++) {\n' +
       '  if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
@@ -123,13 +117,16 @@ Blockly.JavaScript['controls_for_can_stop'] = function (block) {
   let value_to_ = Blockly.JavaScript.valueToCode(block, 'to_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
-  let varName = _loopName_();
+  let varName = _startLoop_();
   if (statements_do_.indexOf('await delay') != -1) {
     statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code, mark;
+  let markVar = '';
   if (!Blockly.isNumber(value_from_) || !Blockly.isNumber(value_to_)) {
-    mark = 'var ' + variable_item_ + ' = ' + value_from_ + '; ' + variable_item_ + ' <= ' + value_to_ + '; ' + variable_item_ + '+=' + value_num_;
+    markVar = 'let ' + variable_item_ + '_inc = ' + value_num_ + ';\n' +
+      'if(' + value_from_ + ' > ' + value_to_ + '){\n  ' + variable_item_ + '_inc = -' + variable_item_ + '_inc;\n}';
+    mark = variable_item_ + ' = ' + value_from_ + '; ' + variable_item_ + '_inc >= 0 ? ' + variable_item_ + ' <= ' + value_to_ + ' : ' + variable_item_ + ' >= ' + value_to_ + '; ' + variable_item_ + ' += ' + variable_item_ + '_inc';
   } else {
     if (value_from_ * 1 > value_to_ * 1) {
       mark = 'var ' + variable_item_ + ' = ' + value_from_ + '; ' + variable_item_ + ' >= ' + value_to_ + '; ' + variable_item_ + '-=' + value_num_;
@@ -139,8 +136,7 @@ Blockly.JavaScript['controls_for_can_stop'] = function (block) {
   }
   if (checkbox_async == 'TRUE') {
     code = '(async function(){\n' +
-      ' let ' + varName + ' = _loopName_();\n'+
-      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + varName + ' = _startLoop_();\n' + markVar +
       '  for (' + mark + ') {\n' +
       '    if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
@@ -148,8 +144,7 @@ Blockly.JavaScript['controls_for_can_stop'] = function (block) {
       '  }\n' +
       '})();\n\n';
   } else {
-    code = 'let ' + varName + ' = _loopName_();\n'+
-      '_startLoop_(' + varName + ');\n' +
+    code = 'let ' + varName + ' = _startLoop_();\n' + markVar +
       'for (' + mark + ') {\n' +
       '  if(!_loop_[' + varName + ']){break;}\n' +
       statements_do_ +
@@ -164,15 +159,14 @@ Blockly.JavaScript['controls_foreach_can_stop'] = function (block) {
   let value_array_ = Blockly.JavaScript.valueToCode(block, 'array_', Blockly.JavaScript.ORDER_ATOMIC);
   let checkbox_async = block.getFieldValue('async');
   let statements_do_ = Blockly.JavaScript.statementToCode(block, 'do_');
-  let varName = _loopName_();
+  let varName = _startLoop_();
   if (statements_do_.indexOf('await delay') != -1) {
     statements_do_ = statements_do_.replace(/, true\); \/\/delay/g, ', ' + varName + ');');
   }
   let code;
   if (checkbox_async == 'TRUE') {
     code = '(async function(){\n' +
-      ' let ' + varName + ' = _loopName_();\n' +
-      ' _startLoop_(' + varName + ');\n' +
+      ' let ' + varName + ' = _startLoop_();\n' +
       ' let ' + variable_item_ + '_list = ' + value_array_ + ';\n' +
       '  for (let ' + variable_item_ + '_index in ' + variable_item_ + '_list) {\n' +
       '    ' + variable_item_ + ' = ' + variable_item_ + '_list[' + variable_item_ + '_index];\n' +
@@ -182,8 +176,7 @@ Blockly.JavaScript['controls_foreach_can_stop'] = function (block) {
       '  }\n' +
       '})();\n\n';
   } else {
-    code = 'let ' + varName + ' = _loopName_();\n' +
-      '_startLoop_(' + varName + ');\n' +
+    code = 'let ' + varName + ' = _startLoop_();\n' +
       'let ' + variable_item_ + '_list = ' + value_array_ + ';\n' +
       'for (let ' + variable_item_ + '_index in ' + variable_item_ + '_list) {\n' +
       '  ' + variable_item_ + ' = ' + variable_item_ + '_list[' + variable_item_ + '_index];\n' +
@@ -207,7 +200,7 @@ Blockly.JavaScript['math_modulo_big_icon'] = function (block) {
 //把一些分散的邏輯集中到邏輯區塊內
 Blockly.JavaScript['logic_is_empty'] = function (block) {
   let value_val_ = Blockly.JavaScript.valueToCode(block, 'val_', Blockly.JavaScript.ORDER_ATOMIC);
-  let code = '!(' + value_val_ + ').length';
+  let code = '!('+value_val_ + '?'+value_val_+':[]).length';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 

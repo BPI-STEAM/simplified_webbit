@@ -50,6 +50,22 @@ Blockly.JavaScript['full_servo_angle'] = function (block) {
   return code;
 };
 
+Blockly.JavaScript['full_servo_angle_custom'] = function (block) {
+  var dropdown_pin_ = block.getFieldValue('pin_');
+  var angle_angle_ = Blockly.JavaScript.valueToCode(block, 'angle_', Blockly.JavaScript.ORDER_ATOMIC);
+  if (angle_angle_ <= 5) {
+    angle_angle_ = 5;
+  }
+  if (angle_angle_ > 270) {
+    angle_angle_ = 5;
+  }
+  if (angle_angle_ >= 175 && angle_angle_ <= 270) {
+    angle_angle_ = 175;
+  }
+  var code = 'Servo.init(board, ' + dropdown_pin_ + ').angle = ' + angle_angle_ + ';\n';
+  return code;
+};
+
 
 
 Blockly.JavaScript['full_sound_status'] = function (block) {

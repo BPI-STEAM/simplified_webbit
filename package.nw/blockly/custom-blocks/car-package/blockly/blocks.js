@@ -257,3 +257,24 @@ Blockly.Blocks['car_ws2812_off'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['car_tcs34725_value'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.WEBDUINO_TCS34725_COLOR)
+      .appendField(new Blockly.FieldDropdown([
+        /* [Blockly.Msg.WEBDUINO_TCS34725_BLACK, "0"], */
+        [Blockly.Msg.WEBDUINO_TCS34725_BLUE, "1"],
+        [Blockly.Msg.WEBDUINO_TCS34725_GREEN, "2"],
+        [Blockly.Msg.WEBDUINO_TCS34725_CYAN, "3"],
+        [Blockly.Msg.WEBDUINO_TCS34725_RED, "4"],
+        [Blockly.Msg.WEBDUINO_TCS34725_PURPLE, "5"],
+        [Blockly.Msg.WEBDUINO_TCS34725_YELLOW, "6"],
+        /* [Blockly.Msg.WEBDUINO_TCS34725_WHITE, "7"] */
+      ]), "color_")
+    this.setOutput(true, null);
+    this.setColour(170);
+    this.setTooltip('');
+    this.setHelpUrl("");
+  }
+};

@@ -34,4 +34,6 @@
     </value>
   </block>
   <block type="car_ws2812_off"></block>
+
+  <block type="car_tcs34725_value"></block>
 </category>

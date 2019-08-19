@@ -14,7 +14,14 @@
     <field name="echo_">9</field>
   </block>
 
-  <block type="full_servo_angle"></block>
+  <!-- <block type="full_servo_angle"></block> -->
+  <block type="full_servo_angle_custom">
+    <value name="angle_">
+      <block type="math_number">
+        <field name="NUM">90</field>
+      </block>
+    </value>
+  </block>
 
   <block type="full_sound_status"></block>
 

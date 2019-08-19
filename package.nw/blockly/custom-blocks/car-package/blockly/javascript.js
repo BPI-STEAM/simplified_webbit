@@ -104,3 +104,9 @@ Blockly.JavaScript['car_ws2812_brightness'] = function (block) {
   var code = 'WS2812.init(board).brightness(' + value_brightness + ');\n';
   return code;
 };
+
+Blockly.JavaScript['car_tcs34725_value'] = function (block) {
+  var dropdown_color = block.getFieldValue('color_');
+  var code = `(TCS34725.init(board)._id[0] == ${dropdown_color})`;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};

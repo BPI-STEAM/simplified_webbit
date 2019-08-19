@@ -5,6 +5,7 @@
     "full_irled_launch",
     "full_ultrasonic_distance",
     "full_servo_angle",
+    "full_servo_angle_custom",
     "full_sound_status",
     "full_dht_get_number",
     "full_shock_new",
